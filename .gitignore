@@ -1,0 +1,10 @@
+.env
+.env.*
+node_modules/
+.DS_Store
+*.apk
+*.aab
+dist-old/
+index-C__5aoc1.js
+index-C__5aod2.js
+index-C__5aooh.js

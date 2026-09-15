@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>DACnetwork Whitepaper v2.0 — $DAC Token of Society | Solana</title>
+<meta name="description" content="Official DACnetwork Whitepaper v2.0. $DAC utility token on Solana: tokenomics, roadmap, governance, rutaX, DACmeta, DACx and MiCA-aware utility framework." />
+<meta name="keywords" content="DACnetwork whitepaper, $DAC token, Solana Token-2022, tokenomics, Proof of Activity, rutaX, DACx, DePIN, MiCA utility token, Web3 Romania" />
+<meta name="author" content="Asociația DACnetwork Web3" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="theme-color" content="#02040a" />
+<meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://dacnetwork.io/whitepaper.html" />
+<link rel="alternate" hreflang="en" href="https://dacnetwork.io/whitepaper.html?lang=en" />
+<link rel="alternate" hreflang="ro" href="https://dacnetwork.io/whitepaper.html?lang=ro" />
+<link rel="alternate" hreflang="x-default" href="https://dacnetwork.io/whitepaper.html" />
+<link rel="icon" href="./DAC_logo.png" type="image/png" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="DACnetwork" />
+<meta property="og:title" content="DACnetwork Whitepaper v2.0 — $DAC Token of Society" />
+<meta property="og:description" content="Official whitepaper: $DAC on Solana, ecosystem pillars, tokenomics, roadmap 2026–2030 and governance." />
+<meta property="og:url" content="https://dacnetwork.io/whitepaper.html" />
+<meta property="og:image" content="https://dacnetwork.io/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ro_RO" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@DACLabs" />
+<meta name="twitter:title" content="DACnetwork Whitepaper v2.0 — $DAC Token of Society" />
+<meta name="twitter:description" content="Official whitepaper for the DACnetwork ecosystem and $DAC utility token on Solana." />
+<meta name="twitter:image" content="https://dacnetwork.io/og-image.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dacnetwork.io/#organization",
+      "name": "DACnetwork",
+      "legalName": "Asociația DACnetwork Web3",
+      "url": "https://dacnetwork.io/",
+      "logo": "https://dacnetwork.io/DAC_logo.png",
+      "sameAs": [
+        "https://x.com/DACLabs",
+        "https://t.me/DACNetwork",
+        "https://www.linkedin.com/company/dacnetwork-web3/",
+        "https://github.com/DAC-web3",
+        "https://solscan.io/token/4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb"
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://dacnetwork.io/whitepaper.html#article",
+      "headline": "DACnetwork Whitepaper v2.0 — Token of Society",
+      "name": "DACnetwork Whitepaper v2.0",
+      "description": "Official DACnetwork Whitepaper v2.0 covering the $DAC utility token, ecosystem, tokenomics, roadmap and governance on Solana.",
+      "url": "https://dacnetwork.io/whitepaper.html",
+      "image": "https://dacnetwork.io/og-image.jpg",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-09-08",
+      "inLanguage": ["en", "ro"],
+      "author": { "@id": "https://dacnetwork.io/#organization" },
+      "publisher": { "@id": "https://dacnetwork.io/#organization" },
+      "about": {
+        "@type": "Thing",
+        "name": "$DAC",
+        "description": "Utility token of the DACnetwork ecosystem on Solana (Token-2022)."
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "DACnetwork",
+        "url": "https://dacnetwork.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dacnetwork.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Whitepaper",
+          "item": "https://dacnetwork.io/whitepaper.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  /* Match main site premium lab + poster black↔white stage */
+  --bg:#02040a;--bg2:#03050c;--panel:rgba(12,16,28,.88);
+  --line:rgba(20,241,149,.16);--line2:rgba(255,255,255,.12);
+  --g:#14F195;--g2:#7CFFD0;--p:#9945FF;--p2:#B47CFF;--c:#5EEAD4;
+  --t:#F7F9FF;--m:rgba(247,249,255,.62);--d:rgba(247,249,255,.38);
+  --grad:linear-gradient(135deg,#14F195 0%,#5EEAD4 40%,#B47CFF 100%);
+  --grad-panel:linear-gradient(160deg,rgba(255,255,255,.07) 0%,rgba(12,16,28,.92) 28%,rgba(8,10,20,.96) 100%);
+  --font:'Inter',system-ui,sans-serif;
+  --disp:'Space Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --side:300px;--r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:#02040a;color:var(--t);line-height:1.7;min-height:100vh;-webkit-font-smoothing:antialiased}
+/* Global poster stage: black → soft white (same as main site) */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(ellipse 95% 70% at 50% 35%,rgba(255,255,255,.14) 0%,rgba(180,190,210,.06) 28%,transparent 58%),
+    radial-gradient(ellipse 80% 50% at 50% -5%,rgba(255,255,255,.12) 0%,transparent 50%),
+    radial-gradient(ellipse 60% 45% at 75% 55%,rgba(200,210,230,.05) 0%,transparent 55%),
+    linear-gradient(180deg,#1a1e28 0%,#0c1018 22%,#06080f 48%,#03050a 72%,#010208 100%)}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.025;
+  background-image:linear-gradient(rgba(255,255,255,.7) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.45) 1px,transparent 1px);background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 85% 75% at 50% 40%,#000,transparent);
+  mask-image:radial-gradient(ellipse 85% 75% at 50% 40%,#000,transparent)}
+.shell{display:flex;min-height:100vh;min-height:100dvh;position:relative}
+/* lock page scroll without killing touch scroll inside the drawer */
+body.menu-open{overflow:hidden;position:fixed;inset:0;width:100%;height:100%;touch-action:none}
+body.menu-open .side{touch-action:pan-y}
+
+/* SIDE */
+.side{width:var(--side);flex-shrink:0;position:sticky;top:0;
+  height:100vh;height:100dvh;max-height:100dvh;
+  overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+  border-right:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.06) 0%,rgba(8,12,22,.94) 28%,rgba(3,5,12,.98) 100%);
+  box-shadow:inset -1px 0 0 rgba(255,255,255,.04);
+  padding:18px 12px 48px;
+  padding-bottom:max(72px, calc(env(safe-area-inset-bottom, 0px) + 56px));
+  box-sizing:border-box;
+}
+.side::-webkit-scrollbar{width:4px}.side::-webkit-scrollbar-thumb{background:rgba(20,241,149,.28);border-radius:4px}
+/* end spacer after last nav link */
+.side nav{padding-bottom:12px}
+.side nav:last-of-type{padding-bottom:28px}
+.side nav:last-of-type .nav-a:last-child{margin-bottom:24px}
+.brand{display:flex;gap:12px;align-items:center;padding:8px 10px 16px;margin-bottom:10px;border-bottom:1px solid var(--line2);text-decoration:none;color:inherit}
+.brand img{width:34px;height:34px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(20,241,149,.45))}
+.brand b{font-family:var(--disp);font-size:15px;font-weight:700;letter-spacing:.03em}
+.brand b i{font-style:normal;color:var(--g)}
+.brand small{display:block;font-family:var(--mono);font-size:10px;color:var(--d);letter-spacing:.14em;text-transform:uppercase;margin-top:3px}
+.lang{display:flex;gap:4px;padding:4px;margin:0 4px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(5,8,18,.75));box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.lang button{
+  flex:1;border:0;cursor:pointer;border-radius:11px;padding:9px 8px;
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.12em;
+  background:transparent;color:var(--d);transition:.2s;
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+}
+.lang button .lang-flag{border-radius:2px;flex-shrink:0;opacity:.55;filter:saturate(.75);transition:.2s}
+.lang button:hover{color:var(--t)}
+.lang button:hover .lang-flag{opacity:.9;filter:saturate(1)}
+.lang button.on{
+  color:var(--g);
+  background:linear-gradient(135deg,rgba(20,241,149,.18),rgba(153,69,255,.1));
+  box-shadow:0 0 20px rgba(20,241,149,.12),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.lang button.on .lang-flag{opacity:1;filter:saturate(1.1);box-shadow:0 0 8px rgba(255,255,255,.12)}
+.toc-h{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--d);padding:2px 12px 12px}
+.nav-a{display:flex;gap:10px;padding:10px 12px;margin-bottom:3px;border-radius:12px;text-decoration:none;color:var(--m);font-size:12.5px;border:1px solid transparent;transition:.18s}
+.nav-a em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--d);width:24px;flex-shrink:0}
+.nav-a span{line-height:1.35;font-weight:500}
+.nav-a:hover{background:rgba(255,255,255,.03);border-color:var(--line2);color:var(--t)}
+.nav-a:hover em{color:var(--g)}
+
+.main{flex:1;min-width:0}
+.top{display:none;position:sticky;top:0;z-index:30;padding:12px 14px;background:linear-gradient(180deg,rgba(2,4,10,.96),rgba(5,8,16,.9));backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.1);align-items:center;justify-content:space-between;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.top .m{border:1px solid rgba(255,255,255,.22);background:linear-gradient(135deg,#7CFFD0,#14F195);color:#02040a;border-radius:12px;padding:10px 14px;cursor:pointer;font-family:var(--mono);font-size:11px;font-weight:600;box-shadow:0 0 24px rgba(20,241,149,.3)}
+
+/* HERO */
+.hero{position:relative;padding:clamp(36px,6vw,72px) clamp(18px,5vw,56px) clamp(32px,4vw,48px);border-bottom:1px solid rgba(255,255,255,.1);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(255,255,255,.08),transparent 50%),radial-gradient(ellipse 45% 50% at 90% 20%,rgba(153,69,255,.12),transparent 55%),radial-gradient(ellipse 40% 45% at 10% 80%,rgba(20,241,149,.08),transparent 50%)}
+.hero-in{position:relative;z-index:2;max-width:960px}
+.pill{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--g);padding:8px 16px;border-radius:999px;margin-bottom:20px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(20,241,149,.12),rgba(255,255,255,.05) 50%,rgba(153,69,255,.08));box-shadow:0 0 28px rgba(20,241,149,.1),inset 0 1px 0 rgba(255,255,255,.1)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 10px var(--g);display:block}
+.hero-title-row{
+  display:flex;align-items:center;justify-content:space-between;gap:20px 28px;
+  margin-bottom:12px;flex-wrap:wrap;
+}
+.hero-title-row h1{
+  font-family:var(--disp);font-weight:700;letter-spacing:-.03em;line-height:.98;
+  font-size:clamp(40px,7vw,66px);margin:0;flex:1;min-width:min(100%,220px);
+  background:linear-gradient(135deg,#fff 0%,#14F195 35%,#5EEAD4 55%,#B47CFF 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-title-row h1 b{color:inherit;-webkit-text-fill-color:transparent}
+.hero-logo{
+  flex-shrink:0;width:clamp(88px,14vw,128px);height:clamp(88px,14vw,128px);
+  display:flex;align-items:center;justify-content:center;
+  border-radius:28px;padding:14px;
+  border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(20,241,149,.08) 50%,rgba(153,69,255,.08));
+  box-shadow:0 0 40px rgba(20,241,149,.15),0 16px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.14);
+}
+.hero-logo img{
+  width:100%;height:100%;object-fit:contain;
+  filter:drop-shadow(0 0 16px rgba(20,241,149,.45));
+}
+.hero .sub{font-family:var(--disp);font-size:clamp(16px,2.4vw,21px);font-weight:500;color:rgba(243,246,255,.8);margin-bottom:12px}
+.hero .lede{color:var(--m);font-size:15px;max-width:560px;margin-bottom:26px;line-height:1.7}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.pcard{position:relative;padding:18px 14px 14px;border-radius:var(--r);border:1px solid var(--line2);background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(5,8,22,.4));box-shadow:0 14px 40px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.04);overflow:hidden;transition:.25s}
+.pcard:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#9945FF,#14F195)}
+.pcard:hover{transform:translateY(-3px);border-color:rgba(20,241,149,.3)}
+.pcard strong{display:block;font-family:var(--disp);font-size:15px;color:var(--g);margin-bottom:6px}
+.pcard span{font-size:12px;color:var(--d);line-height:1.4;display:block}
+.mica{border-radius:var(--r);padding:16px 18px 16px 20px;border:1px solid rgba(153,69,255,.3);background:linear-gradient(135deg,rgba(153,69,255,.1),rgba(20,241,149,.05));position:relative;color:var(--m);font-size:13.5px;line-height:1.65;box-shadow:0 12px 36px rgba(0,0,0,.2)}
+.mica:before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:0 3px 3px 0;background:linear-gradient(180deg,#9945FF,#14F195)}
+.mica strong{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--p2);margin-bottom:8px}
+
+/* BODY */
+.body{padding:clamp(20px,4vw,44px) clamp(14px,4vw,52px) 90px;max-width:960px}
+.panel{display:none}.panel.on{display:block}
+
+.chapter{margin-bottom:28px;scroll-margin-top:20px}
+.ch-head{
+  display:flex;align-items:flex-start;gap:16px;padding:20px 22px;margin-bottom:0;
+  border-radius:var(--r) var(--r) 0 0;
+  border:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(20,241,149,.06) 45%,rgba(153,69,255,.05));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
+}
+.ch-no{
+  font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;
+  color:var(--g);padding:8px 10px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(20,241,149,.12),rgba(255,255,255,.04));
+  flex-shrink:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.ch-title{font-family:var(--disp);font-size:clamp(1.2rem,2.5vw,1.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.25;padding-top:4px}
+.ch-body{
+  padding:clamp(20px,3vw,32px);
+  border:1px solid rgba(255,255,255,.12);border-top:0;
+  border-radius:0 0 var(--r) var(--r);
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(8,12,22,.92) 40%,rgba(4,6,14,.95));
+  box-shadow:0 20px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.h3{font-family:var(--disp);font-size:1.05rem;font-weight:600;color:var(--g2);margin:1.6em 0 .75em;padding:11px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);border-left:3px solid var(--g);background:linear-gradient(90deg,rgba(20,241,149,.08),rgba(255,255,255,.03),transparent)}
+.ch-body p{color:var(--m);margin:0 0 1em;font-size:15px;line-height:1.78}
+.callout{padding:14px 16px;margin:0 0 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);border-left:3px solid var(--p);background:linear-gradient(135deg,rgba(153,69,255,.1),rgba(255,255,255,.03));color:var(--m);font-size:14px;line-height:1.6}
+.list{list-style:none;margin:0 0 1.1em;padding:12px 14px 12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(5,8,18,.5))}
+.list li{position:relative;padding:6px 0 6px 16px;color:var(--m);font-size:14.5px}
+.list li:before{content:"";position:absolute;left:0;top:.85em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#9945FF,#14F195);box-shadow:0 0 8px rgba(20,241,149,.45)}
+
+/* ========== PROFESSIONAL TABLES ========== */
+.table-wrap{
+  margin:16px 0 22px;border-radius:14px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(5,8,18,.7));
+  box-shadow:0 12px 40px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl thead th{
+  font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--g);text-align:left;padding:14px 16px;
+  background:linear-gradient(180deg,rgba(20,241,149,.12),rgba(20,241,149,.04));
+  border-bottom:1px solid rgba(20,241,149,.2);
+}
+.tbl tbody td{padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:middle;color:var(--m)}
+.tbl tbody tr:last-child td{border-bottom:0}
+.tbl tbody tr:hover td{background:rgba(20,241,149,.04)}
+.td-label{font-family:var(--mono);font-size:12px;color:var(--d);letter-spacing:.04em;width:38%;white-space:normal;word-break:break-word}
+.td-val{font-family:var(--mono);font-size:13px;color:var(--g2);font-weight:500;word-break:break-word;overflow-wrap:anywhere}
+.td-inner{display:inline;min-width:0}
+code.addr,.addr{
+  display:inline;font-family:var(--mono);font-size:.9em;font-weight:600;
+  color:var(--g2);word-break:break-all;overflow-wrap:anywhere;
+  background:rgba(20,241,149,.08);border:1px solid rgba(20,241,149,.18);
+  border-radius:6px;padding:1px 6px;line-height:1.55;
+}
+a.inline-link{color:var(--g);text-decoration:none;border-bottom:1px solid rgba(20,241,149,.35);word-break:break-word}
+a.inline-link:hover{color:var(--g2);border-bottom-color:var(--g)}
+.tbl-4 .td-cat{font-family:var(--disp);font-weight:600;color:var(--t);font-size:13.5px}
+.tbl-4 .td-amt{font-family:var(--mono);color:var(--g2);font-size:12.5px;white-space:nowrap}
+.tbl-4 .td-why{font-size:12.5px;color:var(--d);line-height:1.45}
+.tbl-4 .td-pct{min-width:120px}
+.bar{display:flex;align-items:center;gap:10px;min-width:110px}
+.bar i{display:block;height:7px;border-radius:6px;background:linear-gradient(90deg,#9945FF,#14F195);box-shadow:0 0 10px rgba(20,241,149,.35);min-width:4px}
+.bar em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--g);font-weight:600}
+.row-total td{background:rgba(20,241,149,.07)!important;color:var(--t)!important;font-weight:700;border-top:1px solid rgba(20,241,149,.25)}
+.row-total .td-cat,.row-total .td-amt{color:var(--g)!important}
+.td-cat{display:flex;align-items:center;gap:10px}
+.td-cat .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;box-shadow:0 0 8px currentColor}
+.row-n{display:inline-block;font-size:10px;color:var(--d);margin-right:10px;opacity:.7}
+
+/* ===== TOKEN ALLOCATION — clear categories ===== */
+.alloc-board{margin:18px 0 28px}
+.alloc-visual{
+  padding:20px 18px 16px;margin-bottom:16px;border-radius:16px;
+  border:1px solid rgba(20,241,149,.2);
+  background:linear-gradient(160deg,rgba(12,18,36,.9),rgba(8,12,24,.95));
+  box-shadow:0 16px 48px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04);
+}
+.stack-bar{
+  display:flex;width:100%;height:28px;border-radius:999px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.35);
+  box-shadow:inset 0 2px 8px rgba(0,0,0,.4);
+  margin-bottom:16px;
+}
+.stack-seg{
+  display:block;height:100%;min-width:2px;
+  transition:filter .2s;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+}
+.stack-seg:hover{filter:brightness(1.15)}
+.alloc-legend{
+  display:flex;flex-wrap:wrap;gap:10px 16px;
+}
+.alloc-leg{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;color:var(--m);
+}
+.alloc-leg i{
+  width:12px;height:12px;border-radius:4px;flex-shrink:0;
+  box-shadow:0 0 8px rgba(255,255,255,.15);
+}
+.alloc-leg span{opacity:.9}
+.alloc-leg b{font-family:var(--mono);color:var(--g);font-size:12px;font-weight:600}
+
+.alloc-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-bottom:16px;
+}
+.alloc-card{
+  position:relative;
+  padding:18px 16px 16px;
+  border-radius:16px;
+  border:1px solid color-mix(in srgb, var(--c) 35%, transparent);
+  background:
+    linear-gradient(165deg, var(--cs), rgba(5,8,22,.5)),
+    rgba(8,12,24,.85);
+  box-shadow:0 12px 36px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.05);
+  overflow:hidden;
+  transition:transform .22s, box-shadow .22s;
+}
+.alloc-card:before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:var(--c);box-shadow:0 0 12px var(--c);
+}
+.alloc-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 44px rgba(0,0,0,.35), 0 0 24px color-mix(in srgb, var(--c) 20%, transparent);
+}
+.alloc-card-top{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:10px;padding-left:6px;
+}
+.alloc-idx{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  color:var(--d);
+}
+.alloc-pct{
+  font-family:var(--disp);font-size:22px;font-weight:700;
+  color:var(--cl);letter-spacing:-.02em;
+  text-shadow:0 0 20px color-mix(in srgb, var(--c) 40%, transparent);
+}
+.alloc-name{
+  font-family:var(--disp);font-size:15px;font-weight:700;
+  color:var(--t);margin:0 0 8px;padding-left:6px;letter-spacing:-.01em;
+  line-height:1.25;
+}
+.alloc-amt{
+  font-family:var(--mono);font-size:14px;font-weight:600;
+  color:var(--cl);padding-left:6px;margin-bottom:8px;
+}
+.alloc-amt small{font-size:11px;opacity:.7;font-weight:500}
+.alloc-why{
+  font-size:12.5px;line-height:1.5;color:var(--d);
+  margin:0 0 12px;padding-left:6px;
+}
+.alloc-track{
+  height:6px;border-radius:6px;background:rgba(255,255,255,.06);
+  overflow:hidden;margin-left:6px;
+}
+.alloc-track i{
+  display:block;height:100%;border-radius:6px;
+  background:var(--c);box-shadow:0 0 10px var(--c);
+}
+
+.alloc-total{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;
+  padding:16px 20px;margin-bottom:16px;border-radius:14px;
+  border:1px solid rgba(20,241,149,.3);
+  background:linear-gradient(135deg,rgba(20,241,149,.1),rgba(153,69,255,.06));
+  font-family:var(--mono);font-size:13px;
+}
+.alloc-total span{color:var(--d);letter-spacing:.12em;text-transform:uppercase;font-size:11px}
+.alloc-total b{color:var(--g);font-size:18px;font-weight:700}
+.alloc-total em{font-style:normal;color:var(--g2);font-weight:600}
+
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:12px 0 20px}
+.feat{padding:16px;border-radius:14px;border:1px solid rgba(153,69,255,.18);background:linear-gradient(145deg,rgba(153,69,255,.08),rgba(20,241,149,.04))}
+.feat strong{display:block;font-family:var(--disp);color:var(--g);margin-bottom:6px;font-size:14px}
+.feat span{font-size:13px;color:var(--d);line-height:1.45}
+
+.phase-grid{display:grid;gap:12px;margin:12px 0 20px}
+.phase{
+  padding:16px 18px 16px 16px;border-radius:14px;
+  border:1px solid color-mix(in srgb, var(--c,#14F195) 30%, transparent);
+  background:linear-gradient(90deg, color-mix(in srgb, var(--c,#14F195) 12%, transparent), rgba(255,255,255,.02));
+  border-left:4px solid var(--c,#14F195);
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+}
+.phase-t{font-family:var(--disp);font-weight:600;color:var(--t);margin-bottom:8px;font-size:14px;display:flex;align-items:center;gap:10px}
+.phase-t i{width:10px;height:10px;border-radius:50%;background:var(--c,#14F195);box-shadow:0 0 10px var(--c,#14F195);flex-shrink:0}
+.phase p{margin:0!important;font-size:13.5px!important;color:var(--m)!important;line-height:1.55!important}
+
+/* ===== WHY DACNETWORK ===== */
+.why-card{
+  margin:0 0 16px;border-radius:18px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 16px 40px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.why-card-head{
+  display:flex;align-items:center;gap:12px;padding:14px 18px;
+  border-bottom:1px solid var(--line2);
+}
+.why-card-head i{
+  width:34px;height:34px;border-radius:12px;display:grid;place-items:center;
+  font-style:normal;font-weight:800;font-family:var(--disp);font-size:15px;
+  flex-shrink:0;
+}
+.why-card-head h3{
+  font-family:var(--disp);font-size:1.05rem;font-weight:700;letter-spacing:-.01em;
+  margin:0;color:var(--t);
+}
+.why-card-body{padding:16px 18px 18px}
+.why-card-body p{margin:0 0 .85em;font-size:14.5px;line-height:1.72;color:var(--m)}
+.why-card-body p:last-child{margin-bottom:0}
+.why-problem{
+  border-color:rgba(244,114,182,.28);
+  background:linear-gradient(160deg,rgba(244,114,182,.1),rgba(8,12,24,.92) 45%);
+}
+.why-problem .why-card-head{
+  background:linear-gradient(90deg,rgba(244,114,182,.14),transparent);
+}
+.why-problem .why-card-head i{
+  color:#fff;background:linear-gradient(135deg,#F472B6,#9945FF);
+  box-shadow:0 0 18px rgba(244,114,182,.35);
+}
+.why-solution{
+  border-color:rgba(20,241,149,.28);
+  background:linear-gradient(160deg,rgba(20,241,149,.1),rgba(8,12,24,.92) 45%);
+}
+.why-solution .why-card-head{
+  background:linear-gradient(90deg,rgba(20,241,149,.12),transparent);
+}
+.why-solution .why-card-head i{
+  color:#050816;background:linear-gradient(135deg,#14F195,#7CFFD0);
+  box-shadow:0 0 18px rgba(20,241,149,.35);
+}
+.why-mantras{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 16px;
+}
+.why-mantra{
+  margin:0;padding:14px 14px 14px 12px;border-radius:14px;
+  border:1px solid rgba(20,241,149,.2);
+  background:rgba(5,8,22,.45);
+  font-family:var(--disp);font-size:13.5px;font-weight:600;line-height:1.4;color:var(--t);
+  position:relative;
+}
+.why-mantra span{
+  display:block;font-size:22px;line-height:1;color:var(--g);opacity:.7;margin-bottom:4px;
+  font-family:Georgia,serif;
+}
+.why-label{
+  margin:8px 0 14px;display:flex;align-items:center;gap:10px;
+}
+.why-label span{
+  font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--g2);padding:8px 12px;border-radius:999px;
+  border:1px solid rgba(20,241,149,.22);background:rgba(20,241,149,.08);
+}
+.why-principles{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:4px 0 8px;
+}
+.why-pill{
+  display:flex;align-items:flex-start;gap:10px;padding:14px 14px;
+  border-radius:14px;border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(5,8,22,.5));
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  transition:border-color .2s,transform .2s;
+}
+.why-pill:hover{border-color:color-mix(in srgb,var(--c,#14F195) 45%,transparent);transform:translateY(-1px)}
+.why-pill i{
+  width:22px;height:22px;border-radius:8px;flex-shrink:0;
+  display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;
+  color:#050816;background:var(--c,#14F195);
+  box-shadow:0 0 12px color-mix(in srgb,var(--c,#14F195) 50%,transparent);
+  margin-top:1px;
+}
+.why-pill span{font-size:13.5px;font-weight:500;color:var(--t);line-height:1.4}
+
+/* ===== ROADMAP TIMELINE ===== */
+.rm-track{
+  position:relative;margin:18px 0 10px;padding:4px 0 4px 0;
+  display:flex;flex-direction:column;gap:0;
+}
+.rm-track:before{
+  content:"";position:absolute;left:23px;top:18px;bottom:18px;width:2px;
+  background:linear-gradient(180deg,#14F195,#9945FF 50%,#38BDF8);
+  opacity:.45;border-radius:2px;
+}
+.rm-card{
+  position:relative;display:grid;grid-template-columns:48px 1fr;gap:14px;
+  padding:0 0 18px;align-items:start;
+}
+.rm-card:last-child{padding-bottom:4px}
+.rm-node{
+  width:48px;display:flex;justify-content:center;position:relative;z-index:1;padding-top:4px;
+}
+.rm-node span{
+  width:40px;height:40px;border-radius:14px;display:grid;place-items:center;
+  font-family:var(--mono);font-size:13px;font-weight:700;color:#050816;
+  background:var(--c,#14F195);
+  box-shadow:0 0 0 4px rgba(6,10,20,.9),0 0 22px color-mix(in srgb,var(--c,#14F195) 45%,transparent);
+}
+.rm-done .rm-node span{background:linear-gradient(135deg,#14F195,#7CFFD0)}
+.rm-now .rm-node span{background:linear-gradient(135deg,#9945FF,#B47CFF);color:#fff}
+.rm-next .rm-node span{background:linear-gradient(135deg,#1a2438,#243049);color:var(--g2);border:1px solid rgba(20,241,149,.25);box-shadow:0 0 0 4px rgba(6,10,20,.9)}
+.rm-body{
+  min-width:0;padding:14px 16px 16px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(155deg,rgba(255,255,255,.06),rgba(8,12,22,.94));
+  box-shadow:0 12px 32px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.1);
+}
+.rm-done .rm-body{border-color:rgba(20,241,149,.28);background:linear-gradient(155deg,rgba(20,241,149,.1),rgba(8,12,24,.94) 55%)}
+.rm-now .rm-body{border-color:rgba(153,69,255,.35);box-shadow:0 12px 36px rgba(153,69,255,.12),inset 0 1px 0 rgba(255,255,255,.05)}
+.rm-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-bottom:6px}
+.rm-title{font-family:var(--disp);font-size:1.05rem;font-weight:700;color:var(--t);margin:0;letter-spacing:-.01em}
+.rm-badge{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 10px;border-radius:999px;
+}
+.rm-badge-done{color:#050816;background:var(--g);box-shadow:0 0 14px rgba(20,241,149,.3)}
+.rm-badge-now{color:#fff;background:linear-gradient(135deg,#9945FF,#B47CFF);box-shadow:0 0 14px rgba(153,69,255,.35)}
+.rm-badge-next{color:var(--d);background:rgba(255,255,255,.05);border:1px solid var(--line2)}
+.rm-time{
+  font-family:var(--mono);font-size:12px;color:var(--g2);letter-spacing:.08em;
+  margin-bottom:10px;
+}
+.rm-list{
+  list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;
+}
+.rm-list li{
+  font-size:12.5px;line-height:1.4;color:var(--m);
+  padding:8px 11px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(0,0,0,.22);
+  max-width:100%;
+}
+.rm-desc{margin:0;font-size:13.5px;color:var(--m);line-height:1.55}
+
+.qa-list{display:flex;flex-direction:column;gap:12px;margin:4px 0 20px}
+.qa{
+  margin:0;border-radius:14px;border:1px solid var(--line2);overflow:hidden;
+  background:rgba(5,8,22,.35);
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+}
+.qa .q,.qa .a{
+  padding:14px 16px;display:flex;gap:12px;align-items:flex-start;
+  font-size:14.5px;line-height:1.6;min-width:0;
+}
+.qa .q{background:linear-gradient(90deg,rgba(20,241,149,.09),rgba(20,241,149,.02));color:var(--t);border-bottom:1px solid var(--line2);font-weight:600}
+.qa .a{background:rgba(255,255,255,.02);color:var(--m);font-weight:400}
+.qa > .q > span,.qa > .a > span{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--g);
+  flex-shrink:0;padding-top:3px;width:18px;text-align:center;
+}
+.qa .qa-text{flex:1;min-width:0;word-break:break-word;overflow-wrap:anywhere}
+.qa .a .qa-text{color:var(--m)}
+
+/* FAQ closing card */
+.wp-close{
+  margin:28px 0 8px;padding:28px 22px 24px;border-radius:18px;text-align:center;
+  border:1px solid rgba(20,241,149,.22);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%,rgba(20,241,149,.1),transparent 55%),
+    radial-gradient(ellipse 50% 40% at 100% 100%,rgba(153,69,255,.1),transparent 50%),
+    linear-gradient(165deg,rgba(16,24,44,.96),rgba(8,12,24,.98));
+  box-shadow:0 18px 48px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.wp-close-brand{
+  font-family:var(--disp);font-size:clamp(1.5rem,4vw,1.85rem);font-weight:700;
+  letter-spacing:-.02em;color:var(--t);margin-bottom:6px;
+}
+.wp-close-brand span{color:var(--g)}
+.wp-close-tag{
+  font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--g2);margin:0 0 16px!important;
+}
+.wp-close-slogans{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 18px;
+}
+.wp-close-slogans span{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--m);
+  padding:8px 12px;border-radius:999px;
+  border:1px solid rgba(20,241,149,.18);background:rgba(20,241,149,.06);
+}
+.wp-close-assoc{
+  font-size:13.5px!important;color:var(--t)!important;margin:0 0 12px!important;font-weight:500;
+}
+.wp-close-links{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 16px;
+}
+.wp-close-links a{
+  font-family:var(--mono);font-size:11px;color:var(--g);text-decoration:none;
+  padding:9px 12px;border-radius:10px;border:1px solid rgba(20,241,149,.22);
+  background:rgba(20,241,149,.06);transition:.18s;word-break:break-word;
+}
+.wp-close-links a:hover{border-color:rgba(20,241,149,.45);background:rgba(20,241,149,.12);color:var(--g2)}
+.wp-close-mint{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  margin:0 auto 16px;max-width:100%;padding:14px 14px;
+  border-radius:12px;border:1px solid rgba(153,69,255,.22);
+  background:rgba(153,69,255,.07);
+}
+.wp-close-mint span{
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--p2);
+}
+.wp-close-mint code.addr{
+  display:block;width:100%;max-width:100%;text-align:center;
+  font-size:11.5px;line-height:1.55;padding:10px 12px;
+  word-break:break-all;overflow-wrap:anywhere;box-sizing:border-box;
+}
+.wp-close-legal{
+  font-size:12px!important;color:var(--d)!important;line-height:1.55!important;
+  margin:0!important;max-width:42em;margin-left:auto!important;margin-right:auto!important;
+}
+
+.foot{margin-top:32px;padding:18px 20px;border-radius:var(--r);border:1px solid var(--line2);background:rgba(255,255,255,.02);font-family:var(--mono);font-size:11px;color:var(--d);letter-spacing:.05em;line-height:1.65}
+.backdrop{
+  display:none;position:fixed;inset:0;z-index:90;
+  background:rgba(2,6,16,.55);cursor:pointer;
+}
+.backdrop.show{display:block}
+
+/* Premium polish extras */
+.progress{
+  position:fixed;top:0;left:0;right:0;height:3px;z-index:60;
+  background:rgba(255,255,255,.04);
+}
+.progress>i{
+  display:block;height:100%;width:0%;
+  background:linear-gradient(90deg,#9945FF,#14F195);
+  box-shadow:0 0 12px rgba(20,241,149,.5);
+  transition:width .08s linear;
+}
+.back-site{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin:0 6px 14px;padding:11px 12px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(135deg,rgba(20,241,149,.12),rgba(255,255,255,.04) 50%,rgba(153,69,255,.08));
+  color:var(--g);text-decoration:none;font-family:var(--mono);font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;font-weight:600;
+  transition:.2s;box-shadow:0 0 20px rgba(20,241,149,.08),inset 0 1px 0 rgba(255,255,255,.08);
+}
+.back-site:hover{border-color:rgba(20,241,149,.45);box-shadow:0 0 28px rgba(20,241,149,.15);transform:translateY(-1px)}
+.nav-a.active{
+  background:linear-gradient(110deg,rgba(20,241,149,.14),rgba(153,69,255,.07));
+  border-color:rgba(20,241,149,.3);color:var(--g);
+  box-shadow:inset 3px 0 0 var(--g);
+}
+.nav-a.active em{color:var(--p2)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.hero-actions a{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;font-weight:600;transition:.2s;
+}
+.hero-actions .btn-main{
+  border:1px solid rgba(255,255,255,.25);color:#02040a;
+  background:linear-gradient(135deg,#7CFFD0,#14F195 55%,#0db876);
+  box-shadow:0 0 32px rgba(20,241,149,.4),0 8px 24px rgba(0,0,0,.3);font-weight:700;
+}
+.hero-actions .btn-main:hover{box-shadow:0 0 44px rgba(20,241,149,.55);transform:translateY(-1px)}
+.hero-actions .btn-ghost{
+  border:1px solid rgba(255,255,255,.22);color:var(--t);
+  background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+}
+.hero-actions .btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.08)}
+.chapter{animation:fadeUp .45s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.ch-body{position:relative}
+.ch-body:before{
+  content:"";position:absolute;inset:0;border-radius:0 0 var(--r) var(--r);pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,241,149,.03),transparent 40px);
+}
+
+/* ========== MOBILE ========== */
+@media(max-width:960px){
+  html,body{overflow-x:clip;-webkit-text-size-adjust:100%;background:#02040a}
+  body{-webkit-tap-highlight-color:transparent}
+  .progress{top:env(safe-area-inset-top,0)}
+  .side{
+    position:fixed;top:0;left:-110%;
+    width:min(92vw,340px);
+    /* use dynamic viewport — 100vh cuts off last TOC items on mobile browsers */
+    height:100vh;height:100dvh;max-height:100dvh;
+    bottom:auto;
+    transition:left .28s cubic-bezier(.4,0,.2,1);
+    z-index:100;
+    box-shadow:20px 0 48px rgba(0,0,0,.4),inset -1px 0 0 rgba(20,241,149,.12);
+    padding-top:max(16px,env(safe-area-inset-top,0px));
+    padding-left:16px;padding-right:16px;
+    /* generous bottom room: home indicator + last item (17) fully tappable */
+    padding-bottom:max(120px, calc(env(safe-area-inset-bottom, 0px) + 96px));
+    /* slightly more open / lighter solid panel */
+    background:linear-gradient(180deg,#121820,#080c14) !important;
+    border-right:1px solid rgba(255,255,255,.12);
+    -webkit-backdrop-filter:none !important;
+    backdrop-filter:none !important;
+    -webkit-font-smoothing:antialiased;
+    transform:none !important;
+    filter:none !important;
+    overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+    pointer-events:auto;
+    touch-action:pan-y;
+  }
+  .side.open{left:0;transform:none !important}
+  .side .nav-a,.side .brand b,.side .lang button,.side .toc-h,.side .back-site{
+    -webkit-font-smoothing:antialiased;
+    text-rendering:geometricPrecision;
+  }
+  .side .nav-a{color:rgba(243,246,255,.78)}
+  .side .nav-a:active,.side .nav-a.active{color:var(--g)}
+  .side .toc-h{color:rgba(243,246,255,.5);padding-top:6px}
+  .side nav:last-of-type{padding-bottom:40px}
+  .side nav:last-of-type .nav-a:last-child{
+    margin-bottom:32px;
+    /* keep last chapter fully above browser chrome */
+    scroll-margin-bottom:48px;
+  }
+  .top{
+    display:flex;gap:10px;align-items:center;
+    padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top));
+    background:linear-gradient(180deg,#121820,#0a0e16);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    -webkit-backdrop-filter:none;
+    backdrop-filter:none;
+    z-index:50;
+  }
+  .backdrop{
+    background:rgba(2,6,16,.48);
+    -webkit-backdrop-filter:none;backdrop-filter:none;
+    z-index:90;
+  }
+  .top .m{
+    min-height:44px;min-width:44px;padding:10px 14px;font-size:12px;flex-shrink:0;
+    position:relative;z-index:51;touch-action:manipulation;
+  }
+  .top .m[aria-expanded="true"]{
+    border-color:rgba(20,241,149,.45);
+    background:rgba(20,241,149,.14);
+  }
+  .top .lang{margin:0;flex:1;max-width:140px}
+  .top .lang button{min-height:42px;padding:10px 6px}
+  .hero{
+    padding:20px 16px 24px;
+    padding-left:max(16px,env(safe-area-inset-left));
+    padding-right:max(16px,env(safe-area-inset-right));
+  }
+  .hero-title-row{gap:14px;margin-bottom:14px}
+  .hero-title-row h1{font-size:clamp(32px,10vw,42px);min-width:0}
+  .hero-logo{width:64px;height:64px;padding:8px;border-radius:18px}
+  .hero .sub{font-size:15px;margin-bottom:10px}
+  .hero .lede{font-size:14px;margin-bottom:18px;line-height:1.65}
+  .pill{font-size:10px;padding:7px 12px;margin-bottom:14px;letter-spacing:.1em}
+  .pillars{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+  .pcard{padding:14px 12px 12px;border-radius:14px}
+  .pcard strong{font-size:13px;margin-bottom:4px}
+  .pcard span{font-size:11px;line-height:1.4}
+  .pcard:hover{transform:none}
+  .pcard:active{border-color:rgba(20,241,149,.35);transform:scale(.98)}
+  .mica{padding:14px 14px 14px 16px;font-size:12.5px;border-radius:14px;line-height:1.6}
+  .mica strong{font-size:9px;margin-bottom:6px}
+  .hero-actions{margin-top:16px;flex-direction:column}
+  .hero-actions a{width:100%;justify-content:center;min-height:48px;padding:14px 16px;font-size:11px}
+  .body{
+    padding:16px 12px 72px;
+    padding-left:max(12px,env(safe-area-inset-left));
+    padding-right:max(12px,env(safe-area-inset-right));
+    padding-bottom:max(72px,env(safe-area-inset-bottom));
+    max-width:100%;
+  }
+  .chapter{margin-bottom:18px;scroll-margin-top:72px}
+  .ch-head{flex-direction:column;gap:10px;padding:14px 14px 12px;border-radius:14px 14px 0 0}
+  .ch-no{font-size:11px;padding:6px 10px}
+  .ch-title{font-size:1.15rem;padding-top:0;line-height:1.3}
+  .ch-body{padding:16px 14px 18px;border-radius:0 0 14px 14px}
+  .h3{font-size:1rem;padding:10px 12px;margin:1.2em 0 .6em}
+  .ch-body p{font-size:14px;line-height:1.7;margin-bottom:.85em}
+  .callout{font-size:13px;padding:12px 12px 12px 14px;margin-bottom:12px}
+  .list{padding:10px 12px 10px 14px}
+  .list li{font-size:13.5px;padding:5px 0 5px 14px}
+  .table-wrap{margin:12px 0 16px;border-radius:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+  .tbl{min-width:0;width:100%;font-size:12.5px}
+  .tbl thead th{padding:10px 10px;font-size:9px;letter-spacing:.08em;white-space:nowrap}
+  .tbl tbody td{padding:11px 10px}
+  .td-label{width:auto;white-space:normal;font-size:11px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+  .td-label .row-n{margin-right:0}
+  .td-val{font-size:12px;word-break:break-word}
+  .tbl-4{min-width:580px}
+  .tbl-4 thead th,.tbl-4 tbody td{padding:12px 12px}
+  .alloc-board{margin:14px 0 20px}
+  .alloc-visual{padding:14px 12px 12px;margin-bottom:12px;border-radius:14px}
+  .stack-bar{height:22px;margin-bottom:12px}
+  .alloc-legend{gap:8px 10px}
+  .alloc-leg{font-size:11px}
+  .alloc-leg i{width:10px;height:10px}
+  .alloc-cards{grid-template-columns:1fr;gap:12px;margin-bottom:12px}
+  .alloc-card{padding:16px 14px 14px;border-radius:14px}
+  .alloc-card:hover{transform:none}
+  .alloc-card:active{transform:scale(.99)}
+  .alloc-pct{font-size:26px}
+  .alloc-name{font-size:15px}
+  .alloc-amt{font-size:13px}
+  .alloc-why{font-size:12.5px;line-height:1.5}
+  .alloc-board .table-wrap{display:none}
+  .alloc-total{flex-direction:column;align-items:flex-start;gap:6px;padding:14px 14px;margin-bottom:12px;font-size:12px}
+  .alloc-total b{font-size:20px}
+  .feat-grid{grid-template-columns:1fr;gap:10px}
+  .feat{padding:14px}
+  .phase-grid{gap:10px}
+  .phase{padding:14px}
+  .phase-t{font-size:13.5px}
+  .phase p{font-size:13px!important}
+  .why-mantras{grid-template-columns:1fr;gap:8px}
+  .why-mantra{font-size:13px;padding:12px}
+  .why-principles{grid-template-columns:1fr;gap:8px}
+  .why-card-body{padding:14px}
+  .why-card-head{padding:12px 14px}
+  .why-pill{padding:12px}
+  .rm-track:before{left:19px}
+  .rm-card{grid-template-columns:40px 1fr;gap:10px;padding-bottom:14px}
+  .rm-node{width:40px}
+  .rm-node span{width:34px;height:34px;border-radius:12px;font-size:12px}
+  .rm-body{padding:12px 12px 14px;border-radius:14px}
+  .rm-title{font-size:1rem}
+  .rm-list{gap:6px}
+  .rm-list li{font-size:12px;padding:7px 9px;width:100%;box-sizing:border-box}
+  .qa-list{gap:10px;margin-bottom:16px}
+  .qa .q,.qa .a{padding:12px 12px;font-size:13.5px;gap:10px}
+  .qa > .q > span,.qa > .a > span{width:16px;font-size:9px;padding-top:2px}
+  .wp-close{margin-top:20px;padding:22px 14px 18px;border-radius:16px}
+  .wp-close-slogans{gap:6px}
+  .wp-close-slogans span{font-size:10px;padding:7px 10px}
+  .wp-close-links{flex-direction:column;align-items:stretch}
+  .wp-close-links a{text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+  .wp-close-mint{padding:12px 10px}
+  .wp-close-mint code.addr{font-size:11px;padding:10px 8px}
+  .wp-close-legal{font-size:11.5px!important;padding:0 4px}
+  /* 2-col tables → stacked cards on phone */
+  .table-2col{overflow:visible;border:0;background:transparent;box-shadow:none}
+  .table-2col .tbl{display:block;width:100%;min-width:0}
+  .table-2col thead{display:none}
+  .table-2col tbody{display:flex;flex-direction:column;gap:10px}
+  .table-2col tr{
+    display:flex;flex-direction:column;gap:0;
+    border:1px solid rgba(20,241,149,.16);border-radius:12px;overflow:hidden;
+    background:rgba(5,8,22,.55);
+  }
+  .table-2col td{
+    display:block;width:100%!important;padding:12px 12px!important;
+    border-bottom:1px solid rgba(255,255,255,.05);white-space:normal!important;
+  }
+  .table-2col td:last-child{border-bottom:0}
+  .table-2col .td-label{color:var(--d);font-size:11px}
+  .table-2col .td-val{color:var(--g2);font-size:12.5px}
+  .table-2col .row-n{display:inline-block;margin-right:8px}
+  .td-label,.td-val{width:auto!important}
+  .foot{margin-top:24px;padding:14px;font-size:10px;line-height:1.6;word-break:break-word}
+  .back-site{min-height:44px;margin-bottom:12px}
+  .lang button{min-height:44px}
+  .nav-a{padding:12px;min-height:44px;align-items:center}
+}
+@media(max-width:560px){
+  .pillars{grid-template-columns:1fr 1fr}
+  .hero-title-row h1{font-size:34px}
+  .hero-logo{width:56px;height:56px;border-radius:16px;padding:6px}
+  .pcard strong{font-size:12.5px}
+  .pcard span{font-size:10.5px}
+}
+@media(max-width:380px){
+  .pillars{grid-template-columns:1fr}
+  .hero-title-row h1{font-size:30px}
+}
+@media print{
+  .side,.top,.lang,.backdrop,.progress,.back-site,.hero-actions{display:none!important}
+  body{background:#fff;color:#111}
+  .ch-body,.ch-head{box-shadow:none;background:#fff;border-color:#ddd;color:#111}
+  .ch-body p,.tbl tbody td{color:#333}
+  .tbl thead th{color:#0a8f5e;background:#f0faf5}
+  .alloc-board .table-wrap{display:block!important}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+<div class="backdrop" id="bd"></div>
+<div class="shell">
+  <aside class="side" id="side">
+    <a class="brand" href="https://dacnetwork.io">
+      <img src="/DAC_logo.png" alt="DAC" onerror="this.src='./DAC_logo.png'" />
+      <div><b>DAC<i>network</i></b><small>Whitepaper v2.0</small></div>
+    </a>
+    <a class="back-site" href="https://dacnetwork.io" id="backSite">← Site</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" class="on" data-lang="en" aria-label="English">
+        <svg class="lang-flag" width="18" height="12" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk-side"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#uk-side)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+        <span>EN</span>
+      </button>
+      <button type="button" data-lang="ro" aria-label="Română">
+        <svg class="lang-flag" width="18" height="12" viewBox="0 0 20 14" aria-hidden="true"><rect width="6.67" height="14" fill="#002B7F"/><rect x="6.67" width="6.66" height="14" fill="#FCD116"/><rect x="13.33" width="6.67" height="14" fill="#CE1126"/></svg>
+        <span>RO</span>
+      </button>
+    </div>
+    <div class="toc-h" id="tocLabel">Contents</div>
+    <nav id="toc-en"><a class="nav-a" href="#ch-00-en"><em>00</em><span>Executive Summary</span></a><a class="nav-a" href="#ch-01-en"><em>01</em><span>Why DACnetwork?</span></a><a class="nav-a" href="#ch-02-en"><em>02</em><span>The DACnetwork Ecosystem</span></a><a class="nav-a" href="#ch-03-en"><em>03</em><span>The $DAC Utility Token</span></a><a class="nav-a" href="#ch-04-en"><em>04</em><span>Tokenomics &amp; Public Presale</span></a><a class="nav-a" href="#ch-05-en"><em>05</em><span>Governance &amp; DAO</span></a><a class="nav-a" href="#ch-06-en"><em>06</em><span>The DAC Economic Model</span></a><a class="nav-a" href="#ch-07-en"><em>07</em><span>Security &amp; Trust Framework</span></a><a class="nav-a" href="#ch-08-en"><em>08</em><span>Legal Framework &amp; MiCA Alignment</span></a><a class="nav-a" href="#ch-09-en"><em>09</em><span>Risk Management</span></a><a class="nav-a" href="#ch-10-en"><em>10</em><span>Roadmap 2026-2030</span></a><a class="nav-a" href="#ch-11-en"><em>11</em><span>Conclusion</span></a><a class="nav-a" href="#ch-12-en"><em>12</em><span>Technical Architecture</span></a><a class="nav-a" href="#ch-13-en"><em>13</em><span>$DAC Token Lifecycle</span></a><a class="nav-a" href="#ch-14-en"><em>14</em><span>Ecosystem Participation</span></a><a class="nav-a" href="#ch-15-en"><em>15</em><span>Transparency &amp; Treasury</span></a><a class="nav-a" href="#ch-16-en"><em>16</em><span>DACx — Private Communication Layer</span></a><a class="nav-a" href="#ch-17-en"><em>17</em><span>Frequently Asked Questions</span></a></nav>
+    <nav id="toc-ro" hidden><a class="nav-a" href="#ch-00-ro"><em>00</em><span>Rezumat Executiv</span></a><a class="nav-a" href="#ch-01-ro"><em>01</em><span>De ce DACnetwork?</span></a><a class="nav-a" href="#ch-02-ro"><em>02</em><span>Ecosistemul DACnetwork</span></a><a class="nav-a" href="#ch-03-ro"><em>03</em><span>Tokenul Utilitar $DAC</span></a><a class="nav-a" href="#ch-04-ro"><em>04</em><span>Tokenomics si Prevanzare Publica</span></a><a class="nav-a" href="#ch-05-ro"><em>05</em><span>Guvernanta si DAO</span></a><a class="nav-a" href="#ch-06-ro"><em>06</em><span>Modelul Economic DAC</span></a><a class="nav-a" href="#ch-07-ro"><em>07</em><span>Securitate si Cadru de Incredere</span></a><a class="nav-a" href="#ch-08-ro"><em>08</em><span>Cadru Legal si Aliniere MiCA</span></a><a class="nav-a" href="#ch-09-ro"><em>09</em><span>Gestionarea Riscurilor</span></a><a class="nav-a" href="#ch-10-ro"><em>10</em><span>Foaia de Parcurs 2026-2030</span></a><a class="nav-a" href="#ch-11-ro"><em>11</em><span>Concluzie</span></a><a class="nav-a" href="#ch-12-ro"><em>12</em><span>Arhitectura Tehnica</span></a><a class="nav-a" href="#ch-13-ro"><em>13</em><span>Ciclul de Viata al Tokenului $DAC</span></a><a class="nav-a" href="#ch-14-ro"><em>14</em><span>Participarea in Ecosistem</span></a><a class="nav-a" href="#ch-15-ro"><em>15</em><span>Transparenta si Trezorerie</span></a><a class="nav-a" href="#ch-16-ro"><em>16</em><span>DACx — Stratul de Comunicare Privata</span></a><a class="nav-a" href="#ch-17-ro"><em>17</em><span>Intrebari Frecvente</span></a></nav>
+  </aside>
+  <div class="main">
+    <div class="top">
+      <button type="button" class="m" id="menu" aria-controls="side" aria-expanded="false" aria-label="Open menu">☰ Menu</button>
+      <div class="lang" style="margin:0;min-width:148px" role="group" aria-label="Language">
+        <button type="button" class="on" data-lang="en" aria-label="English">
+          <svg class="lang-flag" width="18" height="12" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="uk-top"><path d="M0,0 v30 h60 v-30 z"/></clipPath><g clip-path="url(#uk-top)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>
+          <span>EN</span>
+        </button>
+        <button type="button" data-lang="ro" aria-label="Română">
+          <svg class="lang-flag" width="18" height="12" viewBox="0 0 20 14" aria-hidden="true"><rect width="6.67" height="14" fill="#002B7F"/><rect x="6.67" width="6.66" height="14" fill="#FCD116"/><rect x="13.33" width="6.67" height="14" fill="#CE1126"/></svg>
+          <span>RO</span>
+        </button>
+      </div>
+    </div>
+    <header class="hero">
+      <div class="hero-in">
+        <div class="pill"><i></i><span id="pillText">Official · v2.0 · 2026 · Solana</span></div>
+        <div class="hero-title-row">
+          <h1>DAC<b>network</b></h1>
+          <div class="hero-logo">
+            <img src="/DAC_logo.png" alt="DACnetwork logo" onerror="this.src='./DAC_logo.png'" />
+          </div>
+        </div>
+        <p class="sub" id="heroSub">Whitepaper — Token of Society</p>
+        <p class="lede" id="heroLede">A decentralized ecosystem on Solana where human activity, digital creation and private communication become verifiable value.</p>
+        <div class="pillars">
+          <div class="pcard"><strong>rutaX</strong><span data-en>Proof of Activity</span><span data-ro hidden>Dovada Activității</span></div>
+          <div class="pcard"><strong>DACmeta</strong><span data-en>Digital Society</span><span data-ro hidden>Societate Digitală</span></div>
+          <div class="pcard"><strong>Smart Systems</strong><span data-en>DePIN Infrastructure</span><span data-ro hidden>Infrastructură DePIN</span></div>
+          <div class="pcard"><strong>DACx</strong><span data-en>Private Communication</span><span data-ro hidden>Comunicare Privată</span></div>
+        </div>
+        <div class="mica">
+          <strong id="micaTitle">Important — MiCA (EU) 2023/1114</strong>
+          <span data-en>$DAC is a utility token. It does not represent a financial investment, equity, or guaranteed returns.</span>
+          <span data-ro hidden>$DAC este un token utilitar. Nu reprezinta o investitie financiara, actiuni sau randamente garantate.</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn-main" href="#ch-00-en" id="ctaRead" data-en-href="#ch-00-en" data-ro-href="#ch-00-ro">Read whitepaper ↓</a>
+          <a class="btn-ghost" href="https://dacnetwork.io">dacnetwork.io</a>
+        </div>
+      </div>
+    </header>
+    <div class="body">
+      <div class="panel on" id="panel-en"><section class="chapter" id="ch-00-en">
+      <header class="ch-head">
+        <span class="ch-no">00</span>
+        <h2 class="ch-title">Executive Summary</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">In this whitepaper</h3><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Chapter</th><th>Topic</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label"><i class="row-n">00</i><span class="td-inner">Executive Summary</span></td><td class="td-val"><span class="td-inner">Mission, pillars and $DAC at a glance</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">01</i><span class="td-inner">Why DACnetwork?</span></td><td class="td-val"><span class="td-inner">The problem and the solution</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">02</i><span class="td-inner">The DACnetwork Ecosystem</span></td><td class="td-val"><span class="td-inner">rutaX, DACmeta, Smart Systems, DACx</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">03–04</i><span class="td-inner">$DAC &amp; Tokenomics</span></td><td class="td-val"><span class="td-inner">Utility token, allocation, burn</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">05–09</i><span class="td-inner">Governance, legal, risk</span></td><td class="td-val"><span class="td-inner">DAO path, MiCA alignment, risks</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">10–17</i><span class="td-inner">Roadmap to FAQ</span></td><td class="td-val"><span class="td-inner">2026–2030, architecture, DACx, FAQ</span></td></tr>
+        </tbody></table></div><p>DACnetwork is a decentralized Web3 ecosystem built on the Solana blockchain with the mission of transforming real human activity into verifiable digital value.</p><p>Unlike speculative crypto projects, DACnetwork is designed around measurable utility. Every token distributed within the ecosystem represents a real contribution made by users, creators, infrastructure operators, or community participants.</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Four Ecosystem Pillars</th><th>rutaX</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Four Ecosystem Pillars"><i class="row-n">01</i><span class="td-inner">Proof of Activity</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">Mobile app rewarding verified physical movement with $DAC. GPS-validated, anti-fraud protected.</span></td></tr><tr><td class="td-label" data-label="Four Ecosystem Pillars"><i class="row-n">02</i><span class="td-inner">DACmeta</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">Digital Society</span></td></tr>
+        </tbody></table></div><p>Structured virtual environments for interaction, digital creation and decentralized marketplace.</p><div class="feat-grid"><div class="feat"><strong>DAC Smart Systems</strong><span>DePIN Infrastructure</span></div></div><p>Physical edge nodes extending DACnetwork into the real world through decentralized infrastructure.</p><div class="feat-grid"><div class="feat"><strong>DACx</strong><span>Private Communication</span></div></div><p>Ephemeral messaging with xID identity and a self-custody Solana Devnet wallet. No phone. No email. Messages are not end-to-end encrypted yet.</p><p>The $DAC Token</p><p>$DAC is the native utility token of the DACnetwork ecosystem. Its primary functions include access to ecosystem services, payments inside DACmeta, rewards for Proof of Activity, rewards for infrastructure contributions, digital marketplace transactions, and community governance through future DAO mechanisms.</p><div class="callout">$DAC does not represent equity, ownership, shares, dividends or any financial claim against the issuer. The token exists exclusively to enable and support the functionality of the DACnetwork ecosystem.</div><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Token Parameter</th><th>Specification</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Token Parameter"><i class="row-n">01</i><span class="td-inner">Token Name</span></td><td class="td-val" data-label="Specification"><span class="td-inner">DACnetwork</span></td></tr><tr><td class="td-label" data-label="Token Parameter"><i class="row-n">02</i><span class="td-inner">Symbol</span></td><td class="td-val" data-label="Specification"><span class="td-inner">$DAC</span></td></tr><tr><td class="td-label" data-label="Token Parameter"><i class="row-n">03</i><span class="td-inner">Blockchain</span></td><td class="td-val" data-label="Specification"><span class="td-inner">Solana Mainnet</span></td></tr><tr><td class="td-label" data-label="Token Parameter"><i class="row-n">04</i><span class="td-inner">Standard</span></td><td class="td-val" data-label="Specification"><span class="td-inner">Token Extensions Program (Token-2022)</span></td></tr><tr><td class="td-label" data-label="Token Parameter"><i class="row-n">05</i><span class="td-inner">Total Supply</span></td><td class="td-val" data-label="Specification"><span class="td-inner">3,000,000,000 $DAC (fixed, immutable)</span></td></tr><tr><td class="td-label" data-label="Token Parameter"><i class="row-n">06</i><span class="td-inner">Transfer Fee</span></td><td class="td-val" data-label="Specification"><span class="td-inner">0.5% per transaction (auto-burn mechanism)</span></td></tr><tr><td class="td-label" data-label="Token Parameter"><i class="row-n">07</i><span class="td-inner">Mint Authority</span></td><td class="td-val" data-label="Specification"><span class="td-inner">REVOKED — no additional tokens possible</span></td></tr>
+        </tbody></table></div><p>Mint Address</p><p><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></p></div>
+    </section><section class="chapter" id="ch-01-en">
+      <header class="ch-head">
+        <span class="ch-no">01</span>
+        <h2 class="ch-title">Why DACnetwork?</h2>
+      </header>
+      <div class="ch-body"><section class="why-card why-problem">
+    <div class="why-card-head"><i>!</i><h3>The Problem</h3></div>
+    <div class="why-card-body"><p>Today's digital economy creates enormous value, yet millions of people contribute every day without receiving fair recognition or ownership of the value they generate. People walk, create content, build communities, operate devices, share knowledge and contribute to digital ecosystems, while the economic benefits are often captured by centralized platforms.</p><p>Traditional platforms monetize user activity through advertising, data collection and centralized control. Users generate value but rarely participate in the long-term growth of the ecosystems they help build.</p><p>Blockchain technology introduced the possibility of digital ownership, but much of the crypto industry has focused on speculation rather than real-world utility. DACnetwork was created to address this imbalance.</p></div>
+  </section><section class="why-card why-solution">
+    <div class="why-card-head"><i>◆</i><h3>Our Solution</h3></div>
+    <div class="why-card-body"><div class="why-mantras"><blockquote class="why-mantra" style="--i:0"><span>“</span>Real activity should create real value.</blockquote><blockquote class="why-mantra" style="--i:1"><span>“</span>Every contribution is measurable.</blockquote><blockquote class="why-mantra" style="--i:2"><span>“</span>Every verified contribution strengthens the ecosystem.</blockquote></div><p>DACnetwork is a decentralized ecosystem where value is created through real participation. Instead of rewarding speculation, DACnetwork rewards measurable contribution through four interconnected pillars: Human Activity (rutaX), Digital Creation (DACmeta), Physical Infrastructure (DAC Smart Systems) and Private Communication (DACx).</p></div>
+  </section><div class="why-label why-label-principles"><span>Core Principles</span></div><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span>Utility before speculation</span></div><div class="why-pill" style="--c:#9945FF"><i>✓</i><span>Transparency by default</span></div><div class="why-pill" style="--c:#38BDF8"><i>✓</i><span>Privacy by architecture</span></div><div class="why-pill" style="--c:#FBBF24"><i>✓</i><span>Community-first governance</span></div><div class="why-pill" style="--c:#F472B6"><i>✓</i><span>Open innovation</span></div><div class="why-pill" style="--c:#A3E635"><i>✓</i><span>Sustainable decentralization</span></div></div></div>
+    </section><section class="chapter" id="ch-02-en">
+      <header class="ch-head">
+        <span class="ch-no">02</span>
+        <h2 class="ch-title">The DACnetwork Ecosystem</h2>
+      </header>
+      <div class="ch-body"><p>An Ecosystem, Not a Single Application</p><div class="callout">DACnetwork is designed as a decentralized ecosystem where multiple independent products operate under one shared digital economy powered by the $DAC utility token. Each product solves a different real-world problem while contributing to the long-term growth of the ecosystem.</div><p>Ecosystem Architecture</p><p>DACnetwork Utility Ecosystem</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>🏃</th><th>rutaX</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="🏃"><i class="row-n">01</i><span class="td-inner">Proof of Activity</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">🌐</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">02</i><span class="td-inner">DACmeta</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">Digital Society</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">03</i><span class="td-inner">⚙️</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">DAC Smart Systems</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">04</i><span class="td-inner">DePIN</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">🔐</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">05</i><span class="td-inner">DACx</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">Comm. Layer</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">06</i><span class="td-inner">$DAC — Common Utility Token Layer</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">rutaX — Proof of Activity</span></td></tr>
+        </tbody></table></div><p>rutaX transforms verified physical movement into digital value. The application rewards users for measurable real-world activity using GPS validation and advanced anti-fraud technologies. Rewarded activities include walking, running, cycling and hiking. Privacy remains a core principle — sensitive location information is processed locally whenever possible.</p><h3 class="h3">DACmeta — Digital Society</h3><p>DACmeta represents the digital social layer of DACnetwork. Rather than building a traditional gaming metaverse, DACmeta creates structured virtual environments where people, organizations and communities interact through decentralized ownership. Capabilities include virtual meeting spaces, educational environments, NFT galleries, a digital asset marketplace, and a creator economy.</p><h3 class="h3">DAC Smart Systems — DePIN</h3><p>DAC Smart Systems extends DACnetwork beyond software into the physical world. Edge devices perform local processing while preserving user privacy. Instead of transmitting unnecessary personal information to centralized servers, devices verify operational events and publish only cryptographic proof when required.</p><h3 class="h3">DACx — Private Communication Layer</h3><p>DACx is the private communication and identity layer of DACnetwork. It enables members to communicate through ephemeral messaging and a self-custody Solana Devnet wallet — identified by a unique xID, without a phone number or email. DACx is live on Android (Beta v1.5.7) with OTA updates. Voice calls exist in the current UI. They are not E2EE. $DAC mainnet payments inside DACx are a future milestone.</p></div>
+    </section><section class="chapter" id="ch-03-en">
+      <header class="ch-head">
+        <span class="ch-no">03</span>
+        <h2 class="ch-title">The $DAC Utility Token</h2>
+      </header>
+      <div class="ch-body"><p>The Economic Engine of DACnetwork</p><div class="callout">The $DAC token is the native utility token of the DACnetwork ecosystem. It is not designed as a speculative asset. It is designed to facilitate participation, reward contribution and enable interactions across every component of the ecosystem.</div><p>Utility Inside the Ecosystem</p><h3 class="h3">Proof of Activity Rewards</h3><p>Users earn $DAC by completing verified physical activity through rutaX. Every reward follows transparent ecosystem rules.</p><h3 class="h3">Digital Marketplace Currency</h3><p>Inside DACmeta, $DAC serves as the primary currency for digital transactions — assets, experiences, NFTs, and premium environments.</p><h3 class="h3">Infrastructure Rewards</h3><p>Operators contributing verified decentralized infrastructure through DAC Smart Systems receive $DAC according to governance policies.</p><h3 class="h3">DACx Ecosystem Integration</h3><p>DACx integrates a self-custody Solana wallet bound to xID. Today the wallet runs on Solana Devnet. It can show and send Devnet DAC (Token-2022 mint <code>8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR</code>) and test SOL. This is not mainnet $DAC (<code>4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code>). Mainnet $DAC payments inside DACx are planned, not live.</p><h3 class="h3">Governance</h3><p>As the ecosystem matures, governance transitions toward the community. Future DAO mechanisms allow eligible token holders to participate in decisions.</p><h3 class="h3">Future Staking</h3><p>Future protocol upgrades may introduce voluntary staking mechanisms to encourage long-term ecosystem participation.</p></div>
+    </section><section class="chapter" id="ch-04-en">
+      <header class="ch-head">
+        <span class="ch-no">04</span>
+        <h2 class="ch-title">Tokenomics &amp; Public Presale</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Token Supply — Permanently Fixed</h3><p>Total Supply: 3,000,000,000 $DAC</p><p>No additional tokens can ever be minted.</p><p>Mint Authority has been permanently revoked.</p><h3 class="h3">Token Allocation</h3><div class="alloc-board">
+    <div class="alloc-visual">
+      <div class="stack-bar"><i class="stack-seg" style="width:30%;background:#14F195" title="Community Rewards: 30%"></i><i class="stack-seg" style="width:25%;background:#9945FF" title="Ecosystem Development: 25%"></i><i class="stack-seg" style="width:15%;background:#38BDF8" title="Treasury: 15%"></i><i class="stack-seg" style="width:15%;background:#FBBF24" title="Team &amp; Advisors: 15%"></i><i class="stack-seg" style="width:10%;background:#F472B6" title="Public Presale: 10%"></i><i class="stack-seg" style="width:5%;background:#A3E635" title="Initial Liquidity: 5%"></i></div>
+      <div class="alloc-legend"><div class="alloc-leg"><i style="background:#14F195"></i><span>Community Rewards</span><b>30%</b></div><div class="alloc-leg"><i style="background:#9945FF"></i><span>Ecosystem Development</span><b>25%</b></div><div class="alloc-leg"><i style="background:#38BDF8"></i><span>Treasury</span><b>15%</b></div><div class="alloc-leg"><i style="background:#FBBF24"></i><span>Team &amp; Advisors</span><b>15%</b></div><div class="alloc-leg"><i style="background:#F472B6"></i><span>Public Presale</span><b>10%</b></div><div class="alloc-leg"><i style="background:#A3E635"></i><span>Initial Liquidity</span><b>5%</b></div></div>
+    </div>
+    <div class="alloc-cards"><article class="alloc-card" style="--c:#14F195;--cs:rgba(20,241,149,0.14);--cl:#7CFFD0">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">01</span>
+          <span class="alloc-pct">30%</span>
+        </div>
+        <h4 class="alloc-name">Community Rewards</h4>
+        <div class="alloc-amt">900,000,000 <small>$DAC</small></div>
+        <p class="alloc-why">PoA rewards, campaigns, creators, governance</p>
+        <div class="alloc-track"><i style="width:30%"></i></div>
+      </article><article class="alloc-card" style="--c:#9945FF;--cs:rgba(153,69,255,0.14);--cl:#B47CFF">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">02</span>
+          <span class="alloc-pct">25%</span>
+        </div>
+        <h4 class="alloc-name">Ecosystem Development</h4>
+        <div class="alloc-amt">750,000,000 <small>$DAC</small></div>
+        <p class="alloc-why">rutaX, DACmeta, DAC Smart Systems, DACx</p>
+        <div class="alloc-track"><i style="width:25%"></i></div>
+      </article><article class="alloc-card" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14);--cl:#7DD3FC">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">03</span>
+          <span class="alloc-pct">15%</span>
+        </div>
+        <h4 class="alloc-name">Treasury</h4>
+        <div class="alloc-amt">450,000,000 <small>$DAC</small></div>
+        <p class="alloc-why">Security, legal, infrastructure, reserves</p>
+        <div class="alloc-track"><i style="width:15%"></i></div>
+      </article><article class="alloc-card" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14);--cl:#FCD34D">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">04</span>
+          <span class="alloc-pct">15%</span>
+        </div>
+        <h4 class="alloc-name">Team &amp; Advisors</h4>
+        <div class="alloc-amt">450,000,000 <small>$DAC</small></div>
+        <p class="alloc-why">Vesting / unlock schedule not yet finalized (TBD)</p>
+        <div class="alloc-track"><i style="width:15%"></i></div>
+      </article><article class="alloc-card" style="--c:#F472B6;--cs:rgba(244,114,182,0.14);--cl:#F9A8D4">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">05</span>
+          <span class="alloc-pct">10%</span>
+        </div>
+        <h4 class="alloc-name">Public Presale</h4>
+        <div class="alloc-amt">300,000,000 <small>$DAC</small></div>
+        <p class="alloc-why">Ecosystem development + initial liquidity</p>
+        <div class="alloc-track"><i style="width:10%"></i></div>
+      </article><article class="alloc-card" style="--c:#A3E635;--cs:rgba(163,230,53,0.14);--cl:#BEF264">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">06</span>
+          <span class="alloc-pct">5%</span>
+        </div>
+        <h4 class="alloc-name">Initial Liquidity</h4>
+        <div class="alloc-amt">150,000,000 <small>$DAC</small></div>
+        <p class="alloc-why">DEX liquidity — DAC/SOL pair</p>
+        <div class="alloc-track"><i style="width:5%"></i></div>
+      </article></div>
+    <div class="alloc-total">
+        <span>TOTAL</span>
+        <b>100%</b>
+        <em>3,000,000,000 $DAC</em>
+      </div>
+    <div class="table-wrap table-alloc">
+    <table class="tbl tbl-4">
+      <thead><tr>
+        <th>Category</th>
+        <th>Allocation</th>
+        <th>Amount</th>
+        <th>Purpose</th>
+      </tr></thead>
+      <tbody>
+      <tr class="">
+            <td class="td-cat"><i class="dot" style="background:#14F195"></i><span>Community Rewards</span></td>
+            <td class="td-pct"><b>30%</b></td>
+            <td class="td-amt">900,000,000</td>
+            <td class="td-why">PoA rewards, campaigns, creators, governance</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#9945FF"></i><span>Ecosystem Development</span></td>
+            <td class="td-pct"><b>25%</b></td>
+            <td class="td-amt">750,000,000</td>
+            <td class="td-why">rutaX, DACmeta, DAC Smart Systems, DACx</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#38BDF8"></i><span>Treasury</span></td>
+            <td class="td-pct"><b>15%</b></td>
+            <td class="td-amt">450,000,000</td>
+            <td class="td-why">Security, legal, infrastructure, reserves</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#FBBF24"></i><span>Team &amp; Advisors</span></td>
+            <td class="td-pct"><b>15%</b></td>
+            <td class="td-amt">450,000,000</td>
+            <td class="td-why">Vesting / unlock schedule not yet finalized (TBD)</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#F472B6"></i><span>Public Presale</span></td>
+            <td class="td-pct"><b>10%</b></td>
+            <td class="td-amt">300,000,000</td>
+            <td class="td-why">Ecosystem development + initial liquidity</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#A3E635"></i><span>Initial Liquidity</span></td>
+            <td class="td-pct"><b>5%</b></td>
+            <td class="td-amt">150,000,000</td>
+            <td class="td-why">DEX liquidity — DAC/SOL pair</td>
+          </tr><tr class="row-total">
+            <td class="td-cat"><span>TOTAL</span></td>
+            <td class="td-pct"><b>100%</b></td>
+            <td class="td-amt">3,000,000,000 $DAC</td>
+            <td class="td-why">Fixed supply — immutable</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  </div><h3 class="h3">Deflationary Burn Mechanism</h3><p>Every on-chain transfer automatically retains 0.5% of the transferred amount via Token-2022 Transfer Fee Extension. Collected tokens are periodically sent to the Solana Incinerator where they are permanently destroyed. Every burn transaction is publicly announced and verifiable on-chain.</p></div>
+    </section><section class="chapter" id="ch-05-en">
+      <header class="ch-head">
+        <span class="ch-no">05</span>
+        <h2 class="ch-title">Governance &amp; DAO</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">From Leadership to Community Governance</h3><p>DACnetwork is founded on the principle that decentralized ecosystems should gradually evolve from centralized coordination to community governance. The long-term objective is a transparent and decentralized governance model where participants actively shape the future of DACnetwork.</p><p>Governance Evolution</p><div class="rm-track" role="list"><article class="rm-card rm-done" style="--c:#14F195;--cs:rgba(20,241,149,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>0</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 0 — Foundation</h4>
+            <span class="rm-badge rm-badge-now">In progress</span>
+          </div>
+          
+          <ul class="rm-list"><li>Asociația DACnetwork Web3 — registration in progress (OG 26/2000). Not yet in the register. Community feedback via official channels.</li></ul>
+        </div>
+      </article><article class="rm-card rm-now" style="--c:#9945FF;--cs:rgba(153,69,255,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>1</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 1 — Community Participation</h4>
+            <span class="rm-badge rm-badge-now">In progress</span>
+          </div>
+          
+          <ul class="rm-list"><li>Community begins participating in non-binding governance proposals for features</li><li>campaigns and improvements.</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>2</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 2 — Hybrid Governance</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          
+          <ul class="rm-list"><li>Selected strategic decisions become subject to community voting</li><li>while the Association manages legal responsibilities.</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>3</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 3 — DAO Governance</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          
+          <ul class="rm-list"><li>Full DAO implementation. Eligible $DAC holders participate in on-chain voting for treasury</li><li>protocol and ecosystem decisions.</li></ul>
+        </div>
+      </article></div></div>
+    </section><section class="chapter" id="ch-06-en">
+      <header class="ch-head">
+        <span class="ch-no">06</span>
+        <h2 class="ch-title">The DAC Economic Model</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Building a Circular Digital Economy</h3><p>The DACnetwork economy follows a simple principle: Contribution → Reward → Utility → Participation → Growth. This cycle creates continuous ecosystem activity. As participation increases, ecosystem utility expands, attracting new participants and creating a self-reinforcing growth loop.</p><p>Real activity creates value.</p><p>Utility sustains value.</p><p>Community expands value.</p><p>Technology verifies value.</p><h3 class="h3">Incentive Alignment</h3><p>Every major participant benefits when the ecosystem grows. Users benefit from additional services. Creators gain access to larger audiences. Organizations benefit from stronger infrastructure. Infrastructure operators strengthen network resilience. The Association achieves its mission through ecosystem adoption. Growth is therefore based on cooperation rather than competition.</p></div>
+    </section><section class="chapter" id="ch-07-en">
+      <header class="ch-head">
+        <span class="ch-no">07</span>
+        <h2 class="ch-title">Security &amp; Trust Framework</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Trust Is Built, Not Claimed</h3><p>The success of a decentralized ecosystem depends on trust. Trust cannot be achieved through marketing alone. It must be earned through transparency, secure technology, responsible governance and verifiable actions. DACnetwork is committed to building an ecosystem where every participant can independently verify how the network operates.</p><p>Security Measures</p><h3 class="h3">Fixed Token Supply</h3><p>3,000,000,000 $DAC — immutable. Mint Authority revoked. No additional issuance possible.</p><h3 class="h3">No Account Freezing</h3><p>Freeze Authority has been permanently revoked. Every holder maintains full control of their assets.</p><p>Blockchain Transparency</p><p>Every transaction is publicly verifiable on Solana. Users can independently verify supply, burns and wallet activity.</p><h3 class="h3">Privacy by Architecture</h3><p>Data processed locally. Only cryptographic proof transmitted when verification is required.</p><h3 class="h3">Smart Contract Philosophy</h3><p>Ecosystem relies on widely adopted and audited blockchain standards rather than unnecessary custom code.</p></div>
+    </section><section class="chapter" id="ch-08-en">
+      <header class="ch-head">
+        <span class="ch-no">08</span>
+        <h2 class="ch-title">Legal Framework &amp; MiCA Alignment</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Commitment to Regulatory Compliance</h3><p>DACnetwork is committed to operating in accordance with applicable laws governing crypto-assets. The project is developed by Asociatia DACnetwork Web3, a non-profit organization being established under Romanian law (OG 26/2000). Alignment with the law is viewed not as a limitation, but as a foundation for responsible innovation.</p><h3 class="h3">MiCA Classification</h3><p>The $DAC token is designed as a utility token under Regulation (EU) 2023/1114. Its purpose is to provide access to services within the DACnetwork ecosystem. The token does not represent company shares, ownership rights, debt instruments, investment contracts or profit-sharing rights.</p><div class="callout">DISCLAIMER pursuant to MiCA Art. 6:</div><p>This white paper has not been examined or approved by any competent authority.</p><div class="callout">$DAC is a utility token. Not an investment. Not a financial instrument.</div><p>No profit guaranteed. No returns promised. Participation involves risk.</p></div>
+    </section><section class="chapter" id="ch-09-en">
+      <header class="ch-head">
+        <span class="ch-no">09</span>
+        <h2 class="ch-title">Risk Management</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Understanding Risk</h3><p>DACnetwork believes that transparency requires openly communicating both the strengths and the risks of the ecosystem. The objective is not to eliminate every risk, but to identify, communicate and manage them responsibly.</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Risk Category</th><th>Description</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Risk Category"><i class="row-n">01</i><span class="td-inner">Market Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Value of $DAC may increase, decrease or become zero.</span></td></tr><tr><td class="td-label" data-label="Risk Category"><i class="row-n">02</i><span class="td-inner">Adoption Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Slower than expected community adoption.</span></td></tr><tr><td class="td-label" data-label="Risk Category"><i class="row-n">03</i><span class="td-inner">Technology Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Network outages, software bugs, cybersecurity incidents.</span></td></tr><tr><td class="td-label" data-label="Risk Category"><i class="row-n">04</i><span class="td-inner">Regulatory Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Future legislation may affect ecosystem operations.</span></td></tr><tr><td class="td-label" data-label="Risk Category"><i class="row-n">05</i><span class="td-inner">Operational Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Delays in development, budget or technical complexity.</span></td></tr><tr><td class="td-label" data-label="Risk Category"><i class="row-n">06</i><span class="td-inner">Liquidity Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Limited trading activity after DEX listings.</span></td></tr><tr><td class="td-label" data-label="Risk Category"><i class="row-n">07</i><span class="td-inner">Cybersecurity Risk</span></td><td class="td-val" data-label="Description"><span class="td-inner">Users responsible for protecting private keys.</span></td></tr>
+        </tbody></table></div></div>
+    </section><section class="chapter" id="ch-10-en">
+      <header class="ch-head">
+        <span class="ch-no">10</span>
+        <h2 class="ch-title">Roadmap 2026-2030</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Building the Digital Society</h3><p>DACnetwork is not a short-term initiative. It is a long-term ecosystem designed to evolve progressively through carefully planned development phases. The roadmap may evolve as technology, regulations and community needs develop.</p><div class="rm-track" role="list"><article class="rm-card rm-done" style="--c:#14F195;--cs:rgba(20,241,149,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>0</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 0</h4>
+            <span class="rm-badge rm-badge-now">In progress</span>
+          </div>
+          <div class="rm-time">2026</div>
+          <ul class="rm-list"><li>Association registration in progress</li><li>Whitepaper v2.0</li><li>token live</li><li>DACx Beta v1.5.7</li><li>website live</li><li>community launch</li><li>GitHub docs</li><li>rutaX Devnet development</li></ul>
+        </div>
+      </article><article class="rm-card rm-now" style="--c:#9945FF;--cs:rgba(153,69,255,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>1</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 1</h4>
+            <span class="rm-badge rm-badge-now">In progress</span>
+          </div>
+          <div class="rm-time">2026-2027</div>
+          <ul class="rm-list"><li>rutaX public beta</li><li>GPS anti-fraud validation</li><li>DACmeta prototype</li><li>DAC Smart Systems prototype</li><li>DACx public launch</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>2</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 2</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          <div class="rm-time">2027</div>
+          <ul class="rm-list"><li>Official rutaX launch</li><li>DACmeta beta</li><li>Marketplace v1</li><li>Public Presale</li><li>DEX listing (DAC/SOL)</li><li>initial liquidity</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>3</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 3</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          <div class="rm-time">2027-2028</div>
+          <ul class="rm-list"><li>International expansion</li><li>strategic partnerships</li><li>DACx $DAC payments</li><li>governance voting</li><li>50,000+ active users</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#F472B6;--cs:rgba(244,114,182,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>4</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 4</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          <div class="rm-time">2028-2029</div>
+          <ul class="rm-list"><li>DAO implementation</li><li>treasury governance</li><li>community proposals</li><li>decentralized funding</li><li>governance dashboard</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#A3E635;--cs:rgba(163,230,53,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>5</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 5</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          <div class="rm-time">2030+</div>
+          <ul class="rm-list"><li>Millions of interactions</li><li>worldwide community</li><li>enterprise integrations</li><li>self-sustaining DAO governance</li></ul>
+        </div>
+      </article></div></div>
+    </section><section class="chapter" id="ch-11-en">
+      <header class="ch-head">
+        <span class="ch-no">11</span>
+        <h2 class="ch-title">Conclusion</h2>
+      </header>
+      <div class="ch-body"><p>A New Vision for Web3</p><p>DACnetwork was created not to build another cryptocurrency, not to follow temporary market trends, but to create a sustainable digital ecosystem where technology serves people. The $DAC utility token connects users, creators, organizations and infrastructure through a shared digital economy.</p><p>Move. Create. Build.</p><p>Own Your Contribution.</p><p>Power the Future.</p><p>DACnetwork commits to building with transparency, innovating responsibly, protecting user ownership, respecting privacy, encouraging participation, supporting open collaboration and creating long-term utility. These commitments define the direction of DACnetwork.</p></div>
+    </section><section class="chapter" id="ch-12-en">
+      <header class="ch-head">
+        <span class="ch-no">12</span>
+        <h2 class="ch-title">Technical Architecture</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Architecture Overview</h3><p>DACnetwork is designed as a multi-layer decentralized ecosystem built on the Solana blockchain. The architecture connects four complementary components: rutaX (Proof of Activity), DACmeta (Digital Society), DAC Smart Systems (Physical Infrastructure / DePIN), and DACx (Private Communication Layer). Each component addresses a different type of real-world contribution while sharing the same utility layer: $DAC.</p><p>Blockchain Layer — Solana Token-2022</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Parameter"><i class="row-n">01</i><span class="td-inner">Token Name</span></td><td class="td-val" data-label="Specification"><span class="td-inner">DACnetwork</span></td></tr><tr><td class="td-label" data-label="Parameter"><i class="row-n">02</i><span class="td-inner">Symbol</span></td><td class="td-val" data-label="Specification"><span class="td-inner">$DAC</span></td></tr><tr><td class="td-label" data-label="Parameter"><i class="row-n">03</i><span class="td-inner">Blockchain</span></td><td class="td-val" data-label="Specification"><span class="td-inner">Solana Mainnet</span></td></tr><tr><td class="td-label" data-label="Parameter"><i class="row-n">04</i><span class="td-inner">Standard</span></td><td class="td-val" data-label="Specification"><span class="td-inner">Token Extensions Program (Token-2022)</span></td></tr><tr><td class="td-label" data-label="Parameter"><i class="row-n">05</i><span class="td-inner">Total Supply</span></td><td class="td-val" data-label="Specification"><span class="td-inner">3,000,000,000 $DAC</span></td></tr><tr><td class="td-label" data-label="Parameter"><i class="row-n">06</i><span class="td-inner">Decimals</span></td><td class="td-val" data-label="Specification"><span class="td-inner">9</span></td></tr>
+        </tbody></table></div><p>Mint Address</p><p><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></p><p>Transfer Fee</p><p>0.5%</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Mint Authority</th><th>Revoked</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Mint Authority"><i class="row-n">01</i><span class="td-inner">Freeze Authority</span></td><td class="td-val" data-label="Revoked"><span class="td-inner">Revoked</span></td></tr><tr><td class="td-label" data-label="Mint Authority"><i class="row-n">02</i><span class="td-inner">Architectural Principle</span></td><td class="td-val" data-label="Revoked"><span class="td-inner">Humans contribute.</span></td></tr><tr><td class="td-label" data-label="Mint Authority"><i class="row-n">03</i><span class="td-inner">Devices measure.</span></td><td class="td-val" data-label="Revoked"><span class="td-inner">Edge systems process.</span></td></tr><tr><td class="td-label" data-label="Mint Authority"><i class="row-n">04</i><span class="td-inner">Blockchain verifies.</span></td><td class="td-val" data-label="Revoked"><span class="td-inner">The ecosystem rewards.</span></td></tr>
+        </tbody></table></div></div>
+    </section><section class="chapter" id="ch-13-en">
+      <header class="ch-head">
+        <span class="ch-no">13</span>
+        <h2 class="ch-title">$DAC Token Lifecycle</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">From Creation to Permanent Burn</h3><p>The $DAC token lifecycle begins with the fixed supply creation and continues through allocation, ecosystem distribution, user activity, transfers, utility and the permanent burn mechanism.</p><p>Burn Mechanism — Step by Step</p><h3 class="h3">Step 1 — Collection</h3><p>The 0.5% transfer fees accumulate automatically in the designated Burn Wallet via Token-2022 Transfer Fee Extension.</p><h3 class="h3">Step 2 — Public Announcement</h3><p>The project announces the planned burn through official channels (X @DACLabs) before execution.</p><h3 class="h3">Step 3 — Permanent Incineration</h3><p>Accumulated tokens are sent to the Solana Incinerator address — permanently destroyed.</p><h3 class="h3">Step 4 — Public Verification</h3><p>Transaction hash is published. Anyone can verify the burn on Solscan.</p></div>
+    </section><section class="chapter" id="ch-14-en">
+      <header class="ch-head">
+        <span class="ch-no">14</span>
+        <h2 class="ch-title">Ecosystem Participation</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Participation at the Core</h3><p>DACnetwork is designed around participation. The ecosystem does not treat users only as consumers of digital services. Users can become contributors through physical activity, digital creation, infrastructure, communication and community participation.</p><p>Four Paths of Participation</p><h3 class="h3">Physical Activity</h3><p>rutaX — Walk, run, cycle and earn $DAC through GPS-validated Proof of Activity.</p><h3 class="h3">Digital Creation</h3><p>DACmeta — Create 3D assets, NFTs, virtual spaces and interact in the digital society.</p><h3 class="h3">Physical Infrastructure</h3><p>DAC Smart Systems — Operate DePIN nodes and contribute physical infrastructure.</p><h3 class="h3">Private Communication</h3><p>DACx — Communicate with xID identity and a built-in Solana Devnet wallet. OTA updates. Honest about storage.</p></div>
+    </section><section class="chapter" id="ch-15-en">
+      <header class="ch-head">
+        <span class="ch-no">15</span>
+        <h2 class="ch-title">Transparency &amp; Treasury</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Transparency as a Core Principle</h3><p>Participants should be able to understand where ecosystem resources come from, how they are allocated and how they are used. Every on-chain transaction involving $DAC is publicly verifiable on Solana.</p><p>Treasury Management Principles</p><h3 class="h3">Transparency</h3><p>Significant treasury activity is publicly identifiable whenever technically and legally possible.</p><h3 class="h3">Responsibility</h3><p>Resources are allocated according to ecosystem priorities rather than short-term market conditions.</p><h3 class="h3">Sustainability</h3><p>Treasury decisions consider the long-term ability of DACnetwork to develop and maintain its ecosystem.</p><h3 class="h3">Accountability</h3><p>Major treasury decisions are documented and, as governance matures, subject to community oversight.</p><p>If it can be verified, make it verifiable.</p><p>If resources move, show the movement.</p><p>If tokens are burned, prove the burn.</p><p>If the ecosystem changes, communicate the change.</p></div>
+    </section><section class="chapter" id="ch-16-en">
+      <header class="ch-head">
+        <span class="ch-no">16</span>
+        <h2 class="ch-title">DACx — Private Communication Layer</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">DACx — The Private Communication Layer of DACnetwork</h3><p>Version 1.5.7  |  Platform: Android  |  Status: Beta Live + OTA</p><p>Communication must not become an archive.</p><p>It must remain consent and moment.</p><p>16.1 What is DACx?</p><p>DACx is the private communication and identity layer of the DACnetwork ecosystem. It is how DACnetwork members speak to each other — directly, by mutual consent, and ephemerally.</p><p>DACx solves one of the most fundamental problems in digital communication: the permanent surveillance economy. Traditional messaging platforms require personal identification, store conversations indefinitely and monetize user data. DACx was built on the opposite philosophy.</p><p>DACx is currently live on Android (Beta v1.5.7) with OTA updates and is part of the DACnetwork ecosystem at dacnetwork.io. Releases: <a class="inline-link" href="https://github.com/DAC-web3/dacx/releases" target="_blank" rel="noopener noreferrer">https://github.com/DAC-web3/dacx/releases</a></p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>16.2 Core Features</th><th>Feature</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="16.2 Core Features"><i class="row-n">01</i><span class="td-inner">Technology</span></td><td class="td-val" data-label="Feature"><span class="td-inner">Description</span></td></tr><tr><td class="td-label" data-label="16.2 Core Features"><i class="row-n">02</i><span class="td-inner">xID Identity</span></td><td class="td-val" data-label="Feature"><span class="td-inner">9-digit ID</span></td></tr>
+        </tbody></table></div><p>Unique network identity — no phone number, no email required. Privacy by design from the first interaction.</p><p>Message requests</p><h3 class="h3">Consent-based</h3><p>Add by QR or xID. They receive a request and can accept or ignore. Chat messages start only after they accept. Incoming requests are possible — spam is limited by consent, not by claiming zero unsolicited contact.</p><p>Ephemeral Messages</p><h3 class="h3">Auto-delete</h3><p>Text and photos disappear 3 minutes after being read. Unread messages are held on DACx servers until they are read, then deleted. There is no permanent conversation archive. Messages are not end-to-end encrypted yet.</p><p>Solana Wallet</p><h3 class="h3">Self-custody</h3><p>Built-in self-custody wallet. New accounts create the key on the phone and show a 12-word recovery phrase. Network today: Solana Devnet — Devnet DAC and test SOL, not $DAC mainnet.</p><p>OTA updates &amp; PIN vault</p><p>v1.5.7</p><p>JS/UI updates apply automatically on v1.5.7. PIN is required on every app open. Voice calls exist in the current UI. They are not E2EE.</p><p>Push Notifications</p><h3 class="h3">FCM</h3><p>Receive notifications when the app is closed — stay connected without compromising privacy.</p><p>16.3 The xID System</p><p>At the core of DACx is the xID — a 9-digit unique network identity that replaces traditional personal identification methods. Users create an xID without providing a phone number, email address or any personal information.</p><p>The xID becomes the user's permanent identity within DACnetwork. It is linked to their self-custody Solana wallet, enabling seamless ecosystem participation from a single, privacy-preserving identity.</p><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span></span></div></div><p>No Phone Required</p><p>Privacy from the first step</p><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span></span></div></div><p>No Email Required</p><p>Zero personal data collected</p><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span></span></div></div><p>Linked to Solana Wallet</p><p>xID + Devnet wallet (not $DAC mainnet yet)</p><p>16.4 Ephemeral Communication Philosophy</p><p>DACx is built on a fundamental principle: communication belongs to the moment it was created, not to a permanent archive controlled by a platform.</p><p>Ephemeral messaging means that once a message has been read, it disappears after 3 minutes. Unread messages are held on DACx servers until they are read, then deleted. There is no permanent conversation archive. Messages are not end-to-end encrypted yet — that is a future roadmap item.</p><p>This is not a limitation. It is a feature. It aligns DACx with the broader DACnetwork philosophy: technology should serve the user, not surveil them.</p><p>16.5 Built-in Solana Wallet</p><p>DACx includes a self-custody Solana wallet. For new accounts the key is created on the phone and recovered with 12 words (the phrase never leaves the device). The wallet is bound to the user xID and unlocked with a PIN.</p><p>Today the wallet runs on Solana Devnet. New accounts create the key on the phone and recover it with 12 words. Devnet DAC (mint <code>8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR</code>) can be viewed and sent. This is not mainnet $DAC. Mainnet $DAC payments inside DACx are a planned Phase 2+ milestone.</p><p>Self-custody: only you control your private keys.</p><p>PIN-secured: protected by your personal code.</p><p>Solana-native: Devnet today (DAC + SOL). Mainnet $DAC is a future milestone.</p><p>xID-bound: wallet and identity in one.</p><p>16.6 DACx in the Ecosystem</p><p>DACx represents the fourth pillar of the DACnetwork ecosystem, complementing rutaX (physical activity), DACmeta (digital society) and DAC Smart Systems (physical infrastructure) with a private communication and identity layer.</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Layer</th><th>Product</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Layer"><i class="row-n">01</i><span class="td-inner">Role in Ecosystem</span></td><td class="td-val" data-label="Product"><span class="td-inner">Activity</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">02</i><span class="td-inner">rutaX</span></td><td class="td-val" data-label="Product"><span class="td-inner">Proof of Activity — movement generates $DAC</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">03</i><span class="td-inner">Physical</span></td><td class="td-val" data-label="Product"><span class="td-inner">DAC Smart Systems</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">04</i><span class="td-inner">DePIN, edge computing, infrastructure</span></td><td class="td-val" data-label="Product"><span class="td-inner">Social</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">05</i><span class="td-inner">DACmeta</span></td><td class="td-val" data-label="Product"><span class="td-inner">Digital society, VR, marketplace, creation</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">06</i><span class="td-inner">Communication</span></td><td class="td-val" data-label="Product"><span class="td-inner">DACx</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">07</i><span class="td-inner">Private messaging, xID identity, Solana wallet</span></td><td class="td-val" data-label="Product"><span class="td-inner">Economic</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">08</i><span class="td-inner">$DAC</span></td><td class="td-val" data-label="Product"><span class="td-inner">Token of Society — common utility layer</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">09</i><span class="td-inner">16.7 DACx Roadmap</span></td><td class="td-val" data-label="Product"><span class="td-inner">Phase</span></td></tr><tr><td class="td-label" data-label="Layer"><i class="row-n">10</i><span class="td-inner">Milestones</span></td><td class="td-val" data-label="Product"><span class="td-inner">Phase 0 ✅</span></td></tr>
+        </tbody></table></div><p>MVP, server infrastructure, xID identity system, Android Beta v1.5.7, OTA updates — LIVE</p><div class="rm-track" role="list"><article class="rm-card rm-now" style="--c:#14F195;--cs:rgba(20,241,149,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>1</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 1 🔄</h4>
+            <span class="rm-badge rm-badge-now">In progress</span>
+          </div>
+          
+          <ul class="rm-list"><li>Public beta</li><li>over 1000 xIDs</li><li>iOS version</li><li>expanded anti-spam mechanisms</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#9945FF;--cs:rgba(153,69,255,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>2</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 2</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          
+          <ul class="rm-list"><li>Mainnet wallet integration</li><li>multi-app xID</li><li>DACx public launch</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>3</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 3</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          
+          <ul class="rm-list"><li>End-to-end encryption</li><li>$DAC payments within DACx</li><li>group communication</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>4</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Phase 4</h4>
+            <span class="rm-badge rm-badge-next">Planned</span>
+          </div>
+          
+          <ul class="rm-list"><li>DAO governance integration</li><li>full interoperability with DACnetwork ecosystem</li></ul>
+        </div>
+      </article></div><p>16.8 How to Get DACx</p><p>DACx Android Beta APK is available at <a class="inline-link" href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a> and on GitHub Releases (<a class="inline-link" href="https://github.com/DAC-web3/dacx/releases/latest" target="_blank" rel="noopener noreferrer">https://github.com/DAC-web3/dacx/releases/latest</a>). The native base is v1.5.7. Users on v1.5.6 must install the new APK once; closing and reopening is not enough. Docs and collaboration: <a class="inline-link" href="https://github.com/DAC-web3/dac-network" target="_blank" rel="noopener noreferrer">https://github.com/DAC-web3/dac-network</a></p><p>Installation Steps</p><h3 class="h3">Download the APK file from www.dacnetwork.io</h3><p>Go to Android Settings → Security → Enable 'Install unknown apps'</p><p>Open the APK and complete installation</p><p>Launch DACx and create your xID</p><p>Set your personal PIN and start communicating</p><p>DACx Beta is available now for Android.</p><p>Version 1.5.7 — Part of DACnetwork.io ecosystem.</p><p>iOS version planned for Phase 1.</p><p>Download: <a class="inline-link" href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a></p><p>16.9 Privacy Commitment</p><p>DACx does not collect phone numbers. DACx does not collect email addresses. DACx does not sell user data. DACx does not monetize user behavior. The recovery phrase is never sent to the server. Messages are not end-to-end encrypted yet. Unread messages are held on DACx servers until they are read, then deleted after 3 minutes. After that, conversation content is not kept as a permanent archive.</p><p>Every architectural decision in DACx reflects the DACnetwork core principle: technology must serve the user, not exploit them. Communication is a human right. Privacy is a design requirement, not an optional feature.</p></div>
+    </section><section class="chapter" id="ch-17-en">
+      <header class="ch-head">
+        <span class="ch-no">17</span>
+        <h2 class="ch-title">Frequently Asked Questions</h2>
+      </header>
+      <div class="ch-body"><div class="qa-list"><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is DACnetwork?</div></div><div class="a"><span>A</span><div class="qa-text">DACnetwork is a decentralized Web3 ecosystem built around real-world participation, digital creation, physical infrastructure and private communication. The ecosystem combines rutaX (Proof of Activity), DACmeta (Digital Society), DAC Smart Systems (DePIN) and DACx (Private Communication Layer), all sharing the $DAC utility token.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is $DAC?</div></div><div class="a"><span>A</span><div class="qa-text">$DAC is the native utility token of the DACnetwork ecosystem, issued on Solana using the Token-2022 standard. It is designed to facilitate participation, reward contribution and enable interactions across all ecosystem components.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is the total supply of $DAC?</div></div><div class="a"><span>A</span><div class="qa-text">3,000,000,000 $DAC — permanently fixed. The Mint Authority has been revoked. No additional tokens can ever be created.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is the $DAC Mint Address?</div></div><div class="a"><span>A</span><div class="qa-text"><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code> — Always verify this address before interacting with $DAC.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">Does $DAC have a transfer fee?</div></div><div class="a"><span>A</span><div class="qa-text">Yes. A 0.5% transfer fee is automatically retained on eligible transfers via Token-2022. These tokens accumulate in the Burn Wallet and are permanently incinerated on the Solana blockchain.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is rutaX?</div></div><div class="a"><span>A</span><div class="qa-text">rutaX is the Proof-of-Activity mobile application (in development). Target formula: 1 $DAC per 10 km of GPS-validated activity, max 5 $DAC per user per day and 50,000 $DAC network-wide per day. Rewards currently run on Devnet, not $DAC mainnet. Identity is linked from DACx (Link rutaX).</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is DACx?</div></div><div class="a"><span>A</span><div class="qa-text">DACx is the private communication layer of DACnetwork. It offers ephemeral messaging (3 minutes after read), a 9-digit xID and a built-in Solana Devnet wallet — no phone or email. Currently live on Android Beta v1.5.7 with OTA. Voice calls exist in the current UI. They are not E2EE. E2EE is planned, not live.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is an xID?</div></div><div class="a"><span>A</span><div class="qa-text">An xID is a 9-digit unique network identity in DACx that replaces traditional personal identification. No phone number or email address is required. The xID is linked to a self-custody Solana wallet.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is DACmeta?</div></div><div class="a"><span>A</span><div class="qa-text">DACmeta is the digital-society component of DACnetwork — structured virtual environments for interaction, creation and exchange of digital assets in a $DAC-powered economy.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">What is DAC Smart Systems?</div></div><div class="a"><span>A</span><div class="qa-text">DAC Smart Systems is the physical infrastructure (DePIN) component of DACnetwork. Physical edge nodes contribute measurable infrastructure activity to the network, verified on-chain.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">Does $DAC guarantee financial returns?</div></div><div class="a"><span>A</span><div class="qa-text">No. DACnetwork does not guarantee price appreciation, financial returns, liquidity or exchange listings. $DAC is a utility token. Participation involves risk.</div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">Where can I verify $DAC on-chain?</div></div><div class="a"><span>A</span><div class="qa-text">All transactions are verifiable on Solana. Use Solscan with the official Mint Address: <code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></div></div></div><div class="qa"><div class="q"><span>Q</span><div class="qa-text">Where can I download DACx?</div></div><div class="a"><span>A</span><div class="qa-text">DACx Android Beta APK is available at <a class="inline-link" href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a></div></div></div></div><aside class="wp-close" aria-label="DACnetwork">
+    <div class="wp-close-brand">DAC<span>network</span></div>
+    <p class="wp-close-tag">$DAC — Token of Society</p>
+    <div class="wp-close-slogans"><span>Move. Create. Build.</span><span>Own Your Contribution.</span><span>Power the Future.</span></div>
+    <p class="wp-close-assoc">Asociatia DACnetwork Web3  |  Bucharest, Romania</p>
+    <div class="wp-close-links"><a href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a><a href="https://x.com/DACLabs" target="_blank" rel="noopener noreferrer">X: @DACLabs</a><a href="https://t.me/DACNetwork" target="_blank" rel="noopener noreferrer">Telegram: t.me/DACNetwork</a></div>
+    <div class="wp-close-mint"><span>Mint</span><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></div>
+    <p class="wp-close-legal">$DAC is a utility token. Not an investment. Published under Regulation (EU) 2023/1114 — MiCA.</p>
+  </aside></div>
+    </section></div>
+      <div class="panel" id="panel-ro"><section class="chapter" id="ch-00-ro">
+      <header class="ch-head">
+        <span class="ch-no">00</span>
+        <h2 class="ch-title">Rezumat Executiv</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">In acest whitepaper</h3><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Capitol</th><th>Subiect</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label"><i class="row-n">00</i><span class="td-inner">Rezumat executiv</span></td><td class="td-val"><span class="td-inner">Misiune, piloni si $DAC pe scurt</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">01</i><span class="td-inner">De ce DACnetwork?</span></td><td class="td-val"><span class="td-inner">Problema si solutia</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">02</i><span class="td-inner">Ecosistemul DACnetwork</span></td><td class="td-val"><span class="td-inner">rutaX, DACmeta, Smart Systems, DACx</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">03–04</i><span class="td-inner">$DAC si tokenomics</span></td><td class="td-val"><span class="td-inner">Token utilitar, alocare, burn</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">05–09</i><span class="td-inner">Guvernanta, legal, riscuri</span></td><td class="td-val"><span class="td-inner">DAO, aliniere MiCA, riscuri</span></td></tr>
+        <tr><td class="td-label"><i class="row-n">10–17</i><span class="td-inner">Roadmap pana la FAQ</span></td><td class="td-val"><span class="td-inner">2026–2030, arhitectura, DACx, FAQ</span></td></tr>
+        </tbody></table></div><p>DACnetwork este un ecosistem Web3 descentralizat construit pe blockchain-ul Solana, cu misiunea de a transforma activitatea umana reala in valoare digitala verificabila.</p><p>Spre deosebire de proiectele crypto speculative, DACnetwork este proiectat in jurul utilitatii masurabile. Fiecare token distribuit in cadrul ecosistemului reprezinta o contributie reala facuta de utilizatori, creatori, operatori de infrastructura sau participanti ai comunitatii.</p><p>Cei Patru Piloni ai Ecosistemului</p><div class="feat-grid"><div class="feat"><strong>rutaX</strong><span>Dovada Activitatii</span></div></div><p>Aplicatie mobila care recompenseaza miscarea fizica verificata cu $DAC. Validare GPS, protectie anti-frauda.</p><div class="feat-grid"><div class="feat"><strong>DACmeta</strong><span>Societate Digitala</span></div></div><p>Medii virtuale structurate pentru interactiune, creatie digitala si marketplace descentralizat.</p><div class="feat-grid"><div class="feat"><strong>DAC Smart Systems</strong><span>Infrastructura DePIN</span></div></div><p>Noduri edge fizice care extind DACnetwork in lumea reala prin infrastructura descentralizata.</p><div class="feat-grid"><div class="feat"><strong>DACx</strong><span>Comunicare Privata</span></div></div><p>Mesagerie efemera cu identitate xID si portofel Solana Devnet self-custody. Fara telefon. Fara email. Mesajele nu sunt inca criptate end-to-end.</p><h3 class="h3">Tokenul $DAC</h3><p>$DAC este tokenul utilitar nativ al ecosistemului DACnetwork. Functiile sale principale includ: accesul la serviciile ecosistemului, platile in DACmeta, recompensele pentru Dovada de Activitate, recompensele pentru contributii la infrastructura, tranzactiile din piata digitala si guvernanta comunitara prin mecanisme DAO viitoare.</p><div class="callout">$DAC nu reprezinta actiuni, proprietate, dividende sau orice pretentie financiara impotriva emitentului. Tokenul exista exclusiv pentru a permite si sustine functionalitatea ecosistemului DACnetwork.</div><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Parametru Token</th><th>Specificatie</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Parametru Token"><i class="row-n">01</i><span class="td-inner">Denumire Token</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">DACnetwork</span></td></tr><tr><td class="td-label" data-label="Parametru Token"><i class="row-n">02</i><span class="td-inner">Simbol</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">$DAC</span></td></tr><tr><td class="td-label" data-label="Parametru Token"><i class="row-n">03</i><span class="td-inner">Blockchain</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">Solana Mainnet</span></td></tr><tr><td class="td-label" data-label="Parametru Token"><i class="row-n">04</i><span class="td-inner">Standard Tehnic</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">Token Extensions Program (Token-2022)</span></td></tr><tr><td class="td-label" data-label="Parametru Token"><i class="row-n">05</i><span class="td-inner">Supply Total</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">3.000.000.000 $DAC (fix, imuabil)</span></td></tr><tr><td class="td-label" data-label="Parametru Token"><i class="row-n">06</i><span class="td-inner">Taxa Transfer</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">0,5% per tranzactie (mecanism auto-ardere)</span></td></tr><tr><td class="td-label" data-label="Parametru Token"><i class="row-n">07</i><span class="td-inner">Autoritate Mint</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">REVOCATA — niciun token suplimentar posibil</span></td></tr>
+        </tbody></table></div><p>Adresa Contract</p><p><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></p></div>
+    </section><section class="chapter" id="ch-01-ro">
+      <header class="ch-head">
+        <span class="ch-no">01</span>
+        <h2 class="ch-title">De ce DACnetwork?</h2>
+      </header>
+      <div class="ch-body"><section class="why-card why-problem">
+    <div class="why-card-head"><i>!</i><h3>Problema</h3></div>
+    <div class="why-card-body"><p>Economia digitala de astazi creeaza o valoare enorma, totusi milioane de oameni contribuie zilnic fara a primi recunoastere echitabila sau proprietate asupra valorii pe care o genereaza. Oamenii merg, creeaza continut, construiesc comunitati, opereaza dispozitive, impart cunostinte si contribuie la ecosisteme digitale, in timp ce beneficiile economice sunt capturate de obicei de platforme centralizate.</p><p>Platformele traditionale monetizeaza activitatea utilizatorilor prin publicitate, colectare de date si control centralizat. Utilizatorii genereaza valoare, dar rareori participa la cresterea pe termen lung a ecosistemelor pe care le ajuta sa se construiasca.</p><p>Tehnologia blockchain a introdus posibilitatea proprietatii digitale, dar o mare parte din industria crypto s-a concentrat pe speculatie mai degraba decat pe utilitate din lumea reala. DACnetwork a fost creat pentru a aborda acest dezechilibru.</p></div>
+  </section><section class="why-card why-solution">
+    <div class="why-card-head"><i>◆</i><h3>Solutia Noastra</h3></div>
+    <div class="why-card-body"><div class="why-mantras"><blockquote class="why-mantra" style="--i:0"><span>“</span>Activitatea reala ar trebui sa creeze valoare reala.</blockquote><blockquote class="why-mantra" style="--i:1"><span>“</span>Fiecare contributie este masurabila.</blockquote><blockquote class="why-mantra" style="--i:2"><span>“</span>Fiecare contributie verificata intareste ecosistemul.</blockquote></div><p>DACnetwork este un ecosistem descentralizat in care valoarea este creata prin participare reala. In loc sa recompenseze speculatia, DACnetwork recompenseaza contributia masurabila prin patru piloni interconectati: Activitatea Umana (rutaX), Creatia Digitala (DACmeta), Infrastructura Fizica (DAC Smart Systems) si Comunicarea Privata (DACx).</p></div>
+  </section><div class="why-label why-label-principles"><span>Principii Fundamentale</span></div><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span>Utilitate inaintea speculatiei</span></div><div class="why-pill" style="--c:#9945FF"><i>✓</i><span>Transparenta implicita</span></div><div class="why-pill" style="--c:#38BDF8"><i>✓</i><span>Confidentialitate prin arhitectura</span></div><div class="why-pill" style="--c:#FBBF24"><i>✓</i><span>Guvernanta comunitara</span></div><div class="why-pill" style="--c:#F472B6"><i>✓</i><span>Inovatie deschisa</span></div><div class="why-pill" style="--c:#A3E635"><i>✓</i><span>Descentralizare durabila</span></div></div></div>
+    </section><section class="chapter" id="ch-02-ro">
+      <header class="ch-head">
+        <span class="ch-no">02</span>
+        <h2 class="ch-title">Ecosistemul DACnetwork</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Un Ecosistem, Nu o Singura Aplicatie</h3><p>DACnetwork este conceput ca un ecosistem descentralizat in care mai multe produse independente functioneaza sub o singura economie digitala comuna, alimentata de tokenul utilitar $DAC. Fiecare produs rezolva o problema diferita din lumea reala, contribuind totodata la cresterea pe termen lung a ecosistemului.</p><p>Arhitectura Ecosistemului</p><p>Ecosistemul Utilitar DACnetwork</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>🏃</th><th>rutaX</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="🏃"><i class="row-n">01</i><span class="td-inner">Dovada Activitatii</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">🌐</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">02</i><span class="td-inner">DACmeta</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">Societate Digitala</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">03</i><span class="td-inner">⚙️</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">DAC Smart Systems</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">04</i><span class="td-inner">Infrastructura DePIN</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">🔐</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">05</i><span class="td-inner">DACx</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">Comunicare Privata</span></td></tr><tr><td class="td-label" data-label="🏃"><i class="row-n">06</i><span class="td-inner">$DAC — Stratul Comun de Token Utilitar</span></td><td class="td-val" data-label="rutaX"><span class="td-inner">rutaX — Dovada Activitatii</span></td></tr>
+        </tbody></table></div><p>rutaX transforma miscarea fizica verificata in valoare digitala. Aplicatia recompenseaza utilizatorii pentru activitati reale din lumea reala folosind validarea GPS si tehnologii avansate anti-frauda. Activitatile recompensate includ mersul pe jos, alergatul, ciclismul si drumetiile. Confidentialitatea ramane un principiu central — informatiile sensibile de localizare sunt procesate local ori de cate ori este posibil.</p><h3 class="h3">DACmeta — Societate Digitala</h3><p>DACmeta reprezinta stratul social digital al DACnetwork. In loc sa construiasca un metavers traditional de gaming, DACmeta creeaza medii virtuale structurate in care oamenii, organizatiile si comunitatile interactioneaza prin proprietate descentralizata. Capabilitatile includ spatii de intalnire virtuale, medii educationale, galerii de active digitale, o piata de active digitale si o economie a creatorilor.</p><h3 class="h3">DAC Smart Systems — Infrastructura DePIN</h3><p>DAC Smart Systems extinde DACnetwork dincolo de software in lumea fizica. Dispozitivele edge efectueaza procesare locala, pastrandu-se confidentialitatea utilizatorului. In loc sa transmita informatii personale inutile catre servere centralizate, dispozitivele verifica evenimentele operationale si publica doar dovezi criptografice atunci cand este necesar.</p><h3 class="h3">DACx — Stratul de Comunicare Privata</h3><p>DACx este stratul de comunicare privata si identitate al DACnetwork. Permite membrilor sa comunice prin mesagerie efemera si un portofel Solana Devnet self-custody — identificate printr-un xID unic, fara numar de telefon sau email. DACx este live pe Android (Beta v1.5.7) cu update-uri OTA. Apelurile vocale exista in UI-ul actual. Nu sunt E2EE. Platile $DAC pe mainnet in DACx sunt un milestone viitor.</p></div>
+    </section><section class="chapter" id="ch-03-ro">
+      <header class="ch-head">
+        <span class="ch-no">03</span>
+        <h2 class="ch-title">Tokenul Utilitar $DAC</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Motorul Economic al DACnetwork</h3><p>Tokenul $DAC este tokenul utilitar nativ al ecosistemului DACnetwork. Nu este conceput ca un activ speculativ. Este conceput pentru a facilita participarea, a recompensa contributia si a permite interactiunile in toate componentele ecosistemului.</p><p>Utilitate in Cadrul Ecosistemului</p><h3 class="h3">Recompense pentru Dovada de Activitate</h3><p>Utilizatorii castiga $DAC completand activitate fizica verificata prin rutaX. Fiecare recompensa urmeaza regulile transparente ale ecosistemului.</p><h3 class="h3">Moneda Pietei Digitale</h3><p>In DACmeta, $DAC serveste ca moneda principala pentru tranzactii digitale — active, experiente, active digitale unice (NFT-uri) si medii premium.</p><h3 class="h3">Recompense pentru Infrastructura</h3><p>Operatorii care contribuie cu infrastructura descentralizata verificata prin DAC Smart Systems primesc $DAC conform politicilor de guvernanta.</p><h3 class="h3">Integrarea Ecosistemului DACx</h3><p>DACx integreaza un portofel Solana self-custody legat de xID. Astazi portofelul ruleaza pe Solana Devnet. Poate afisa si trimite DAC pe Devnet (Token-2022 mint <code>8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR</code>) si SOL de test. Nu este $DAC pe mainnet (<code>4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code>). Platile $DAC pe mainnet in DACx sunt planificate, nu live.</p><h3 class="h3">Guvernanta</h3><p>Pe masura ce ecosistemul se matureaza, guvernanta trece catre comunitate. Mecanismele DAO viitoare permit detinatorilor de tokeni eligibili sa participe la decizii.</p><h3 class="h3">Miza Viitoare</h3><p>Viitoarele actualizari ale protocolului pot introduce mecanisme voluntare de miza pentru a incuraja participarea pe termen lung in ecosistem.</p></div>
+    </section><section class="chapter" id="ch-04-ro">
+      <header class="ch-head">
+        <span class="ch-no">04</span>
+        <h2 class="ch-title">Tokenomics si Prevanzare Publica</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Supply Token — Permanent Fix</h3><p>Supply Total: 3.000.000.000 $DAC</p><p>Nu pot fi emisi niciodata tokeni suplimentari.</p><p>Autoritatea de Emitere (Mint Authority) a fost revocata permanent.</p><h3 class="h3">Distributia Tokenilor</h3><div class="alloc-board">
+    <div class="alloc-visual">
+      <div class="stack-bar"><i class="stack-seg" style="width:30%;background:#14F195" title="Recompense Comunitate: 30%"></i><i class="stack-seg" style="width:25%;background:#9945FF" title="Dezvoltare Ecosistem: 25%"></i><i class="stack-seg" style="width:15%;background:#38BDF8" title="Trezorerie: 15%"></i><i class="stack-seg" style="width:15%;background:#FBBF24" title="Echipa si Consilieri: 15%"></i><i class="stack-seg" style="width:10%;background:#F472B6" title="Prevanzare Publica: 10%"></i><i class="stack-seg" style="width:5%;background:#A3E635" title="Lichiditate Initiala: 5%"></i></div>
+      <div class="alloc-legend"><div class="alloc-leg"><i style="background:#14F195"></i><span>Recompense Comunitate</span><b>30%</b></div><div class="alloc-leg"><i style="background:#9945FF"></i><span>Dezvoltare Ecosistem</span><b>25%</b></div><div class="alloc-leg"><i style="background:#38BDF8"></i><span>Trezorerie</span><b>15%</b></div><div class="alloc-leg"><i style="background:#FBBF24"></i><span>Echipa si Consilieri</span><b>15%</b></div><div class="alloc-leg"><i style="background:#F472B6"></i><span>Prevanzare Publica</span><b>10%</b></div><div class="alloc-leg"><i style="background:#A3E635"></i><span>Lichiditate Initiala</span><b>5%</b></div></div>
+    </div>
+    <div class="alloc-cards"><article class="alloc-card" style="--c:#14F195;--cs:rgba(20,241,149,0.14);--cl:#7CFFD0">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">01</span>
+          <span class="alloc-pct">30%</span>
+        </div>
+        <h4 class="alloc-name">Recompense Comunitate</h4>
+        <div class="alloc-amt">900.000.000 <small>$DAC</small></div>
+        <p class="alloc-why">Recompense activitate, campanii, creatori, guvernanta</p>
+        <div class="alloc-track"><i style="width:30%"></i></div>
+      </article><article class="alloc-card" style="--c:#9945FF;--cs:rgba(153,69,255,0.14);--cl:#B47CFF">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">02</span>
+          <span class="alloc-pct">25%</span>
+        </div>
+        <h4 class="alloc-name">Dezvoltare Ecosistem</h4>
+        <div class="alloc-amt">750.000.000 <small>$DAC</small></div>
+        <p class="alloc-why">rutaX, DACmeta, DAC Smart Systems, DACx</p>
+        <div class="alloc-track"><i style="width:25%"></i></div>
+      </article><article class="alloc-card" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14);--cl:#7DD3FC">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">03</span>
+          <span class="alloc-pct">15%</span>
+        </div>
+        <h4 class="alloc-name">Trezorerie</h4>
+        <div class="alloc-amt">450.000.000 <small>$DAC</small></div>
+        <p class="alloc-why">Securitate, juridic, infrastructura, rezerve</p>
+        <div class="alloc-track"><i style="width:15%"></i></div>
+      </article><article class="alloc-card" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14);--cl:#FCD34D">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">04</span>
+          <span class="alloc-pct">15%</span>
+        </div>
+        <h4 class="alloc-name">Echipa si Consilieri</h4>
+        <div class="alloc-amt">450.000.000 <small>$DAC</small></div>
+        <p class="alloc-why">Programul de vesting / unlock nu este inca finalizat (TBD)</p>
+        <div class="alloc-track"><i style="width:15%"></i></div>
+      </article><article class="alloc-card" style="--c:#F472B6;--cs:rgba(244,114,182,0.14);--cl:#F9A8D4">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">05</span>
+          <span class="alloc-pct">10%</span>
+        </div>
+        <h4 class="alloc-name">Prevanzare Publica</h4>
+        <div class="alloc-amt">300.000.000 <small>$DAC</small></div>
+        <p class="alloc-why">Dezvoltare ecosistem si lichiditate initiala</p>
+        <div class="alloc-track"><i style="width:10%"></i></div>
+      </article><article class="alloc-card" style="--c:#A3E635;--cs:rgba(163,230,53,0.14);--cl:#BEF264">
+        <div class="alloc-card-top">
+          <span class="alloc-idx">06</span>
+          <span class="alloc-pct">5%</span>
+        </div>
+        <h4 class="alloc-name">Lichiditate Initiala</h4>
+        <div class="alloc-amt">150.000.000 <small>$DAC</small></div>
+        <p class="alloc-why">Lichiditate bursiera descentralizata — perechea DAC/SOL</p>
+        <div class="alloc-track"><i style="width:5%"></i></div>
+      </article></div>
+    <div class="alloc-total">
+        <span>TOTAL</span>
+        <b>100%</b>
+        <em>3.000.000.000 $DAC</em>
+      </div>
+    <div class="table-wrap table-alloc">
+    <table class="tbl tbl-4">
+      <thead><tr>
+        <th>Categorie</th>
+        <th>Alocare</th>
+        <th>Cantitate</th>
+        <th>Destinatie</th>
+      </tr></thead>
+      <tbody>
+      <tr class="">
+            <td class="td-cat"><i class="dot" style="background:#14F195"></i><span>Recompense Comunitate</span></td>
+            <td class="td-pct"><b>30%</b></td>
+            <td class="td-amt">900.000.000</td>
+            <td class="td-why">Recompense activitate, campanii, creatori, guvernanta</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#9945FF"></i><span>Dezvoltare Ecosistem</span></td>
+            <td class="td-pct"><b>25%</b></td>
+            <td class="td-amt">750.000.000</td>
+            <td class="td-why">rutaX, DACmeta, DAC Smart Systems, DACx</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#38BDF8"></i><span>Trezorerie</span></td>
+            <td class="td-pct"><b>15%</b></td>
+            <td class="td-amt">450.000.000</td>
+            <td class="td-why">Securitate, juridic, infrastructura, rezerve</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#FBBF24"></i><span>Echipa si Consilieri</span></td>
+            <td class="td-pct"><b>15%</b></td>
+            <td class="td-amt">450.000.000</td>
+            <td class="td-why">Programul de vesting / unlock nu este inca finalizat (TBD)</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#F472B6"></i><span>Prevanzare Publica</span></td>
+            <td class="td-pct"><b>10%</b></td>
+            <td class="td-amt">300.000.000</td>
+            <td class="td-why">Dezvoltare ecosistem si lichiditate initiala</td>
+          </tr><tr class="">
+            <td class="td-cat"><i class="dot" style="background:#A3E635"></i><span>Lichiditate Initiala</span></td>
+            <td class="td-pct"><b>5%</b></td>
+            <td class="td-amt">150.000.000</td>
+            <td class="td-why">Lichiditate bursiera descentralizata — perechea DAC/SOL</td>
+          </tr><tr class="row-total">
+            <td class="td-cat"><span>TOTAL</span></td>
+            <td class="td-pct"><b>100%</b></td>
+            <td class="td-amt">3.000.000.000 $DAC</td>
+            <td class="td-why">Supply fix — imuabil</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  </div><h3 class="h3">Mecanismul Deflaționar de Ardere</h3><p>Fiecare transfer on-chain retine automat 0,5% din suma transferata prin extensia de Taxa Transfer a protocolului Token-2022. Tokenii colectati sunt trimisi periodic la Incineratorul Solana, unde sunt distrusi permanent. Fiecare tranzactie de ardere este anuntata public si verificabila on-chain.</p></div>
+    </section><section class="chapter" id="ch-05-ro">
+      <header class="ch-head">
+        <span class="ch-no">05</span>
+        <h2 class="ch-title">Guvernanta si DAO</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">De la Conducere la Guvernanta Comunitara</h3><p>DACnetwork este fondat pe principiul ca ecosistemele descentralizate ar trebui sa evolueze gradual de la coordonare centralizata catre guvernanta comunitara. Obiectivul pe termen lung este un model de guvernanta transparent si descentralizat in care participantii modeleaza activ viitorul DACnetwork.</p><p>Evolutia Guvernantei</p><div class="rm-track" role="list"><article class="rm-card rm-done" style="--c:#14F195;--cs:rgba(20,241,149,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>0</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 0 — Fundatie</h4>
+            <span class="rm-badge rm-badge-now">În curs</span>
+          </div>
+          
+          <ul class="rm-list"><li>Asociația DACnetwork Web3 — înregistrare în curs (OG 26/2000). Nu e încă în registru. Feedback prin canalele oficiale.</li></ul>
+        </div>
+      </article><article class="rm-card rm-now" style="--c:#9945FF;--cs:rgba(153,69,255,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>1</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 1 — Participare Comunitara</h4>
+            <span class="rm-badge rm-badge-now">In curs</span>
+          </div>
+          
+          <ul class="rm-list"><li>Comunitatea incepe sa participe la propuneri de guvernanta neobligatorii pentru functionalitati</li><li>campanii si imbunatatiri.</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>2</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 2 — Guvernanta Hibrida</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          
+          <ul class="rm-list"><li>Anumite decizii strategice selectate devin supuse votului comunitatii</li><li>in timp ce Asociatia gestioneaza responsabilitatile juridice.</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>3</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 3 — Guvernanta DAO</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          
+          <ul class="rm-list"><li>Implementare DAO completa. Detinatorii eligibili de $DAC participa la votul on-chain pentru decizii privind trezoreria</li><li>protocolul si ecosistemul.</li></ul>
+        </div>
+      </article></div></div>
+    </section><section class="chapter" id="ch-06-ro">
+      <header class="ch-head">
+        <span class="ch-no">06</span>
+        <h2 class="ch-title">Modelul Economic DAC</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Construind o Economie Digitala Circulara</h3><p>Economia DACnetwork urmeaza un principiu simplu: Contributie → Recompensa → Utilitate → Participare → Crestere. Acest ciclu creeaza activitate continua in ecosistem. Pe masura ce participarea creste, utilitatea ecosistemului se extinde, aträgand noi participanti si creand o bucla de crestere auto-sustinuta.</p><p>Activitatea reala creeaza valoare.</p><p>Utilitatea sustine valoarea.</p><p>Comunitatea extinde valoarea.</p><p>Tehnologia verifica valoarea.</p><h3 class="h3">Alinierea Stimulentelor</h3><p>Fiecare participant major beneficiaza atunci cand ecosistemul creste. Utilizatorii beneficiaza de servicii suplimentare. Creatorii castiga acces la audiente mai largi. Organizatiile beneficiaza de o infrastructura mai puternica. Operatorii de infrastructura intaresc rezilienta retelei. Asociatia isi indeplineste misiunea prin adoptarea ecosistemului. Cresterea se bazeaza, prin urmare, pe cooperare mai degraba decat pe competitie.</p></div>
+    </section><section class="chapter" id="ch-07-ro">
+      <header class="ch-head">
+        <span class="ch-no">07</span>
+        <h2 class="ch-title">Securitate si Cadru de Incredere</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Increderea Se Construieste, Nu Se Revendica</h3><p>Succesul unui ecosistem descentralizat depinde de incredere. Increderea nu poate fi obtinuta doar prin marketing. Trebuie castigata prin transparenta, tehnologie securizata, guvernanta responsabila si actiuni verificabile. DACnetwork se angajeaza sa construiasca un ecosistem in care fiecare participant poate verifica independent modul in care functioneaza reteaua.</p><p>Masuri de Securitate</p><h3 class="h3">Supply Fix de Tokeni</h3><p>3.000.000.000 $DAC — imuabil. Autoritatea de Emitere revocata. Nu este posibila nicio emisiune suplimentara.</p><h3 class="h3">Fara Inghetarea Conturilor</h3><p>Autoritatea de Inghetare a fost revocata permanent. Fiecare detinator mentine controlul deplin asupra activelor sale.</p><h3 class="h3">Transparenta Blockchain</h3><p>Fiecare tranzactie este verificabila public pe Solana. Utilizatorii pot verifica independent supply-ul, arderile si activitatea portofelelor.</p><h3 class="h3">Confidentialitate prin Arhitectura</h3><p>Datele sunt procesate local. Doar dovezile criptografice sunt transmise atunci cand este necesara verificarea.</p><h3 class="h3">Filosofia Contractelor Inteligente</h3><p>Ecosistemul se bazeaza pe standarde blockchain adoptate pe scara larga si auditate, mai degraba decat pe cod personalizat inutil.</p></div>
+    </section><section class="chapter" id="ch-08-ro">
+      <header class="ch-head">
+        <span class="ch-no">08</span>
+        <h2 class="ch-title">Cadru Legal si Aliniere MiCA</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Angajamentul fata de Conformitatea Regulatorie</h3><p>DACnetwork se angajeaza sa functioneze in conformitate cu legile aplicabile care guverneaza activele crypto. Proiectul este dezvoltat de Asociatia DACnetwork Web3, o organizatie non-profit in curs de infiintare conform legislatiei romane (OG 26/2000). Alinierea la lege este privita nu ca o limitare, ci ca o fundatie pentru inovatia responsabila.</p><h3 class="h3">Clasificarea MiCA</h3><p>Tokenul $DAC este conceput ca token utilitar conform Regulamentului (UE) 2023/1114. Scopul sau este de a oferi acces la servicii in cadrul ecosistemului DACnetwork. Tokenul nu reprezinta actiuni ale companiei, drepturi de proprietate, instrumente de datorie, contracte de investitii sau drepturi de impartire a profitului.</p><div class="callout">AVERTISMENT conform art. 6 MiCA:</div><p>Acest document nu a fost examinat sau aprobat de nicio autoritate competenta.</p><div class="callout">$DAC este un token utilitar. Nu o investitie. Nu un instrument financiar.</div><p>Niciun profit garantat. Niciun randament promis. Participarea implica riscuri.</p></div>
+    </section><section class="chapter" id="ch-09-ro">
+      <header class="ch-head">
+        <span class="ch-no">09</span>
+        <h2 class="ch-title">Gestionarea Riscurilor</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Intelegerea Riscului</h3><p>DACnetwork considera ca transparenta necesita comunicarea deschisa atat a punctelor forte, cat si a riscurilor ecosistemului. Obiectivul nu este eliminarea fiecarui risc, ci identificarea, comunicarea si gestionarea lor responsabila.</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Categoria de Risc</th><th>Descriere</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">01</i><span class="td-inner">Riscul de Piata</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Valoarea $DAC poate creste, scadea sau deveni zero.</span></td></tr><tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">02</i><span class="td-inner">Riscul de Adoptie</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Adoptie mai lenta decat se asteapta din partea comunitatii.</span></td></tr><tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">03</i><span class="td-inner">Riscul Tehnologic</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Intreruperi de retea, erori software, incidente de securitate.</span></td></tr><tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">04</i><span class="td-inner">Riscul de Reglementare</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Legislatia viitoare poate afecta operatiunile ecosistemului.</span></td></tr><tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">05</i><span class="td-inner">Riscul Operational</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Intarzieri in dezvoltare, buget sau complexitate tehnica.</span></td></tr><tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">06</i><span class="td-inner">Riscul de Lichiditate</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Activitate de tranzactionare limitata dupa listari.</span></td></tr><tr><td class="td-label" data-label="Categoria de Risc"><i class="row-n">07</i><span class="td-inner">Riscul de Securitate Cibernetica</span></td><td class="td-val" data-label="Descriere"><span class="td-inner">Utilizatorii sunt responsabili pentru protejarea cheilor private.</span></td></tr>
+        </tbody></table></div></div>
+    </section><section class="chapter" id="ch-10-ro">
+      <header class="ch-head">
+        <span class="ch-no">10</span>
+        <h2 class="ch-title">Foaia de Parcurs 2026-2030</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Construind Societatea Digitala</h3><p>DACnetwork nu este o initiativa pe termen scurt. Este un ecosistem pe termen lung conceput sa evolueze progresiv prin faze de dezvoltare planificate cu atentie. Foaia de parcurs poate evolua pe masura ce tehnologia, reglementarile si nevoile comunitatii se dezvolta.</p><div class="rm-track" role="list"><article class="rm-card rm-done" style="--c:#14F195;--cs:rgba(20,241,149,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>0</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 0</h4>
+            <span class="rm-badge rm-badge-now">În curs</span>
+          </div>
+          <div class="rm-time">2026</div>
+          <ul class="rm-list"><li>Inregistrare asociatie in curs</li><li>Whitepaper v2.0</li><li>token  live</li><li>DACx Beta v1.5.7</li><li>site web live</li><li>lansare comunitate</li><li>docs GitHub</li><li>dezvoltare rutaX pe Devnet</li></ul>
+        </div>
+      </article><article class="rm-card rm-now" style="--c:#9945FF;--cs:rgba(153,69,255,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>1</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 1</h4>
+            <span class="rm-badge rm-badge-now">In curs</span>
+          </div>
+          <div class="rm-time">2026-2027</div>
+          <ul class="rm-list"><li>Beta public rutaX</li><li>validare anti-frauda GPS</li><li>prototip DACmeta</li><li>prototip DAC Smart Systems</li><li>lansare publica DACx</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>2</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 2</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          <div class="rm-time">2027</div>
+          <ul class="rm-list"><li>Lansare oficiala rutaX</li><li>beta DACmeta</li><li>Piata v1</li><li>Prevanzare Publica</li><li>listare pe bursa descentralizata (DAC/SOL)</li><li>lichiditate initiala</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>3</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 3</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          <div class="rm-time">2027-2028</div>
+          <ul class="rm-list"><li>Extindere internationala</li><li>parteneriate strategice</li><li>plati $DAC in DACx</li><li>vot de guvernanta</li><li>peste 50.000 utilizatori activi</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#F472B6;--cs:rgba(244,114,182,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>4</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 4</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          <div class="rm-time">2028-2029</div>
+          <ul class="rm-list"><li>Implementare DAO</li><li>guvernanta trezoreriei</li><li>propuneri comunitare</li><li>finantare descentralizata</li><li>tablou de bord de guvernanta</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#A3E635;--cs:rgba(163,230,53,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>5</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 5</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          <div class="rm-time">2030+</div>
+          <ul class="rm-list"><li>Milioane de interactiuni</li><li>comunitate globala</li><li>integrari enterprise</li><li>guvernanta DAO auto-sustinuta</li></ul>
+        </div>
+      </article></div></div>
+    </section><section class="chapter" id="ch-11-ro">
+      <header class="ch-head">
+        <span class="ch-no">11</span>
+        <h2 class="ch-title">Concluzie</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">O Noua Viziune pentru Web3</h3><p>DACnetwork a fost creat nu pentru a construi inca o criptomoneda, nu pentru a urma trenduri temporare de piata, ci pentru a crea un ecosistem digital durabil in care tehnologia serveste oamenii. Tokenul utilitar $DAC conecteaza utilizatori, creatori, organizatii si infrastructura printr-o economie digitala comuna.</p><p>Misca. Creeaza. Construieste.</p><p>Detine-ti Contributia.</p><p>Alimenteaza Viitorul.</p><p>DACnetwork se angajeaza sa construiasca cu transparenta, sa inoveze responsabil, sa protejeze proprietatea utilizatorilor, sa respecte confidentialitatea, sa incurajeze participarea, sa sustina colaborarea deschisa si sa creeze utilitate pe termen lung. Aceste angajamente definesc directia DACnetwork.</p></div>
+    </section><section class="chapter" id="ch-12-ro">
+      <header class="ch-head">
+        <span class="ch-no">12</span>
+        <h2 class="ch-title">Arhitectura Tehnica</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Prezentare Generala Arhitectura</h3><p>DACnetwork este conceput ca un ecosistem descentralizat multi-strat construit pe blockchain-ul Solana. Arhitectura conecteaza patru componente complementare: rutaX (Dovada Activitatii), DACmeta (Societate Digitala), DAC Smart Systems (Infrastructura Fizica / DePIN) si DACx (Stratul de Comunicare Privata). Fiecare componenta abordeaza un tip diferit de contributie din lumea reala, impartasind acelasi strat de utilitate: $DAC.</p><p>Stratul Blockchain — Solana Token-2022</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Parametru</th><th>Specificatie</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Parametru"><i class="row-n">01</i><span class="td-inner">Denumire Token</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">DACnetwork</span></td></tr><tr><td class="td-label" data-label="Parametru"><i class="row-n">02</i><span class="td-inner">Simbol</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">$DAC</span></td></tr><tr><td class="td-label" data-label="Parametru"><i class="row-n">03</i><span class="td-inner">Blockchain</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">Solana Mainnet</span></td></tr><tr><td class="td-label" data-label="Parametru"><i class="row-n">04</i><span class="td-inner">Standard</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">Token Extensions Program (Token-2022)</span></td></tr><tr><td class="td-label" data-label="Parametru"><i class="row-n">05</i><span class="td-inner">Supply Total</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">3.000.000.000 $DAC</span></td></tr><tr><td class="td-label" data-label="Parametru"><i class="row-n">06</i><span class="td-inner">Zecimale</span></td><td class="td-val" data-label="Specificatie"><span class="td-inner">9</span></td></tr>
+        </tbody></table></div><p>Adresa Contract</p><p><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Taxa Transfer</th><th>0,5%</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Taxa Transfer"><i class="row-n">01</i><span class="td-inner">Autoritate Mint</span></td><td class="td-val" data-label="0,5%"><span class="td-inner">Revocata</span></td></tr><tr><td class="td-label" data-label="Taxa Transfer"><i class="row-n">02</i><span class="td-inner">Autoritate Inghetare</span></td><td class="td-val" data-label="0,5%"><span class="td-inner">Revocata</span></td></tr><tr><td class="td-label" data-label="Taxa Transfer"><i class="row-n">03</i><span class="td-inner">Principiu Arhitectural</span></td><td class="td-val" data-label="0,5%"><span class="td-inner">Oamenii contribuie.</span></td></tr><tr><td class="td-label" data-label="Taxa Transfer"><i class="row-n">04</i><span class="td-inner">Dispozitivele masoara.</span></td><td class="td-val" data-label="0,5%"><span class="td-inner">Sistemele edge proceseaza.</span></td></tr><tr><td class="td-label" data-label="Taxa Transfer"><i class="row-n">05</i><span class="td-inner">Blockchain-ul verifica.</span></td><td class="td-val" data-label="0,5%"><span class="td-inner">Ecosistemul recompenseaza.</span></td></tr>
+        </tbody></table></div></div>
+    </section><section class="chapter" id="ch-13-ro">
+      <header class="ch-head">
+        <span class="ch-no">13</span>
+        <h2 class="ch-title">Ciclul de Viata al Tokenului $DAC</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">De la Creare la Ardere Permanenta</h3><p>Ciclul de viata al tokenului $DAC incepe cu crearea supply-ului fix si continua prin alocare, distributie in ecosistem, activitate utilizator, transferuri, utilitate si mecanismul permanent de ardere.</p><p>Mecanismul de Ardere — Pas cu Pas</p><h3 class="h3">Pasul 1 — Colectare</h3><p>Taxele de transfer de 0,5% se acumuleaza automat in Portofelul de Ardere desemnat prin extensia de Taxa Transfer a protocolului Token-2022.</p><h3 class="h3">Pasul 2 — Anuntul Public</h3><p>Proiectul anunta arderea planificata prin canalele oficiale (X @DACLabs) inainte de executie.</p><h3 class="h3">Pasul 3 — Incinerare Permanenta</h3><p>Tokenii acumulati sunt trimisi la adresa Incineratorului Solana — distrusi permanent.</p><h3 class="h3">Pasul 4 — Verificare Publica</h3><p>Hash-ul tranzactiei este publicat. Oricine poate verifica arderea pe Solscan.</p></div>
+    </section><section class="chapter" id="ch-14-ro">
+      <header class="ch-head">
+        <span class="ch-no">14</span>
+        <h2 class="ch-title">Participarea in Ecosistem</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Participarea ca Element Central</h3><p>DACnetwork este conceput in jurul participarii. Ecosistemul nu trateaza utilizatorii doar ca consumatori de servicii digitale. Utilizatorii pot deveni contributori prin activitate fizica, creatie digitala, infrastructura, comunicare si participare comunitara.</p><p>Patru Cai de Participare</p><h3 class="h3">Activitate Fizica</h3><p>rutaX — Mergi, alearga, pedaleza si castiga $DAC prin Dovada de Activitate validata GPS.</p><h3 class="h3">Creatie Digitala</h3><p>DACmeta — Creeaza active 3D, active digitale unice, spatii virtuale si interactioneaza in societatea digitala.</p><h3 class="h3">Infrastructura Fizica</h3><p>DAC Smart Systems — Opereaza noduri DePIN si contribuie cu infrastructura fizica.</p><h3 class="h3">Comunicare Privata</h3><p>DACx — Comunica cu identitate xID si portofel Solana Devnet integrat. Update-uri OTA. Onest despre stocare.</p></div>
+    </section><section class="chapter" id="ch-15-ro">
+      <header class="ch-head">
+        <span class="ch-no">15</span>
+        <h2 class="ch-title">Transparenta si Trezorerie</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">Transparenta ca Principiu Fundamental</h3><p>Participantii ar trebui sa poata intelege de unde provin resursele ecosistemului, cum sunt alocate si cum sunt utilizate. Fiecare tranzactie on-chain implicand $DAC este verificabila public pe Solana.</p><p>Principii de Gestionare a Trezoreriei</p><h3 class="h3">Transparenta</h3><p>Activitatea semnificativa a trezoreriei este identificabila public ori de cate ori este tehnic si juridic posibil.</p><h3 class="h3">Responsabilitate</h3><p>Resursele sunt alocate conform prioritatilor ecosistemului, mai degraba decat conditiilor de piata pe termen scurt.</p><h3 class="h3">Durabilitate</h3><p>Deciziile privind trezoreria iau in considerare capacitatea pe termen lung a DACnetwork de a dezvolta si mentine ecosistemul.</p><h3 class="h3">Responsabilizare</h3><p>Deciziile majore ale trezoreriei sunt documentate si, pe masura ce guvernanta se matureaza, supuse supravegherii comunitatii.</p><p>Daca poate fi verificat, faceam verificabil.</p><p>Daca resursele se misca, aratati miscarea.</p><p>Daca tokenii sunt arsi, dovediti arderea.</p><p>Daca ecosistemul se schimba, comunicati schimbarea.</p></div>
+    </section><section class="chapter" id="ch-16-ro">
+      <header class="ch-head">
+        <span class="ch-no">16</span>
+        <h2 class="ch-title">DACx — Stratul de Comunicare Privata</h2>
+      </header>
+      <div class="ch-body"><h3 class="h3">DACx — Stratul de Comunicare Privata al DACnetwork</h3><p>Versiunea 1.5.7  |  Platforma: Android  |  Stare: Beta Live + OTA</p><p>Comunicarea nu trebuie sa devina o arhiva.</p><p>Trebuie sa ramana consimtamant si moment.</p><p>16.1 Ce este DACx?</p><p>DACx este stratul de comunicare privata si identitate al ecosistemului DACnetwork. Acesta este modul in care membrii DACnetwork vorbesc unii cu altii — direct, prin consimtamant reciproc si efemer.</p><p>DACx rezolva una dintre cele mai fundamentale probleme ale comunicarii digitale: economia de supraveghere permanenta. Platformele traditionale de mesagerie necesita identificare personala, stocheaza conversatiile pe termen nelimitat si monetizeaza datele utilizatorilor. DACx a fost construit pe o filozofie opusa.</p><p>DACx este in prezent disponibil pe Android (Beta v1.5.7) cu update-uri OTA si face parte din ecosistemul DACnetwork la dacnetwork.io. Release-uri: <a class="inline-link" href="https://github.com/DAC-web3/dacx/releases" target="_blank" rel="noopener noreferrer">https://github.com/DAC-web3/dacx/releases</a></p><p>16.2 Functionalitati Principale</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Functionalitate</th><th>Tehnologie</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Functionalitate"><i class="row-n">01</i><span class="td-inner">Descriere</span></td><td class="td-val" data-label="Tehnologie"><span class="td-inner">Identitate xID</span></td></tr><tr><td class="td-label" data-label="Functionalitate"><i class="row-n">02</i><span class="td-inner">ID de 9 cifre</span></td><td class="td-val" data-label="Tehnologie"><span class="td-inner">Identitate unica de retea — fara numar de telefon, fara email. Confidentialitate prin design de la prima interactiune.</span></td></tr><tr><td class="td-label" data-label="Functionalitate"><i class="row-n">03</i><span class="td-inner">Cereri de mesaj</span></td><td class="td-val" data-label="Tehnologie"><span class="td-inner">Bazat pe consimtamant</span></td></tr>
+        </tbody></table></div><p>Adaugi prin QR sau xID. Ei primesc o cerere si pot accepta sau ignora. Mesajele din chat incep doar dupa accept. Cererile pot veni nesolicitate — spam-ul e limitat prin consimtamant, nu prin pretentia de zero contact nesolicitat.</p><p>Mesaje Efemere</p><h3 class="h3">Stergere automata</h3><p>Textele si fotografiile dispar la 3 minute dupa citire. Mesajele necitite stau pe serverele DACx pana sunt citite, apoi sunt sterse. Nu exista arhiva permanenta. Mesajele nu sunt inca criptate end-to-end.</p><p>Portofel Solana</p><h3 class="h3">Self-custody</h3><p>Portofel self-custody integrat. Conturile noi creeaza cheia pe telefon si afiseaza o fraza de 12 cuvinte. Reteaua de azi: Solana Devnet — DAC Devnet si SOL de test, nu $DAC pe mainnet.</p><p>Update-uri OTA si PIN vault</p><p>v1.5.7</p><p>Update-urile JS/UI se aplica automat pe v1.5.7. PIN-ul este cerut la fiecare deschidere. Apelurile vocale exista in UI-ul actual. Nu sunt E2EE.</p><p>Notificari Push</p><h3 class="h3">FCM</h3><p>Primesti notificari cand aplicatia este inchisa — ramai conectat fara a compromite confidentialitatea.</p><p>16.3 Sistemul xID</p><p>La baza DACx se afla xID — o identitate de retea unica de 9 cifre care inlocuieste metodele traditionale de identificare personala. Utilizatorii isi creeaza un xID fara a furniza numar de telefon, adresa de email sau orice informatie personala.</p><p>xID devine identitatea permanenta a utilizatorului in DACnetwork. Este legat de portofelul Solana self-custody al utilizatorului, oferind un strat complet de identitate Web3 intr-o singura aplicatie, care pastreaza confidentialitatea.</p><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span></span></div></div><p>Fara Telefon</p><p>Confidentialitate de la primul pas</p><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span></span></div></div><p>Fara Email</p><p>Zero date personale colectate</p><div class="why-principles"><div class="why-pill" style="--c:#14F195"><i>✓</i><span></span></div></div><p>Legat de Portofel Solana</p><p>xID + portofel Devnet (nu $DAC pe mainnet inca)</p><p>16.4 Filozofia Comunicarii Efemere</p><p>DACx este construit pe un principiu fundamental: comunicarea apartine momentului in care a fost creata, nu unei arhive permanente controlate de o platforma.</p><p>Mesageria efemera inseamna ca, odata ce un mesaj a fost citit, acesta dispare dupa 3 minute. Mesajele necitite stau pe serverele DACx pana sunt citite, apoi sunt sterse. Nu exista arhiva permanenta. Mesajele nu sunt inca criptate end-to-end — acesta este un item viitor pe roadmap.</p><p>Aceasta nu este o limitare. Este o functionalitate. Se aliniaza cu filozofia centrala DACnetwork: tehnologia trebuie sa serveasca utilizatorul, nu sa il supravegheze.</p><p>16.5 Portofel Solana Integrat</p><p>DACx include un portofel Solana self-custody. Pentru conturile noi cheia este creata pe telefon si recuperata cu 12 cuvinte (fraza nu paraseste dispozitivul). Portofelul este legat de xID si deblocat cu PIN.</p><p>Astazi portofelul ruleaza pe Solana Devnet. Conturile noi creeaza cheia pe telefon si o recupereaza cu 12 cuvinte. DAC pe Devnet (mint <code>8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR</code>) poate fi vazut si trimis. Nu este $DAC pe mainnet. Platile $DAC pe mainnet in DACx sunt un milestone planificat (Faza 2+).</p><p>Self-custody: doar tu iti controlezi cheile private.</p><p>Securizat prin PIN: protejat de codul tau personal.</p><p>Nativ Solana: azi pe Devnet (DAC + SOL). $DAC pe mainnet este un milestone viitor.</p><p>Legat de xID: portofel si identitate intr-unul singur.</p><p>16.6 DACx in Ecosistem</p><p>DACx reprezinta al patrulea pilon al ecosistemului DACnetwork, completand rutaX (activitate fizica), DACmeta (societate digitala) si DAC Smart Systems (infrastructura fizica) cu un strat de comunicare privata si identitate.</p><div class="table-wrap table-2col"><table class="tbl">
+        <thead><tr><th>Strat</th><th>Produs</th></tr></thead>
+        <tbody>
+        <tr><td class="td-label" data-label="Strat"><i class="row-n">01</i><span class="td-inner">Rol in Ecosistem</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Activitate</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">02</i><span class="td-inner">rutaX</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Dovada de Activitate — miscarea genereaza $DAC</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">03</i><span class="td-inner">Fizic</span></td><td class="td-val" data-label="Produs"><span class="td-inner">DAC Smart Systems</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">04</i><span class="td-inner">DePIN, calcul edge, infrastructura</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Social</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">05</i><span class="td-inner">DACmeta</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Societate digitala, spatii virtuale, piata, creatie</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">06</i><span class="td-inner">Comunicare</span></td><td class="td-val" data-label="Produs"><span class="td-inner">DACx</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">07</i><span class="td-inner">Mesagerie privata, identitate xID, portofel Solana</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Economic</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">08</i><span class="td-inner">$DAC</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Tokenul Societatii — strat comun de utilitate</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">09</i><span class="td-inner">16.7 Foaia de Parcurs DACx</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Faza</span></td></tr><tr><td class="td-label" data-label="Strat"><i class="row-n">10</i><span class="td-inner">Obiective</span></td><td class="td-val" data-label="Produs"><span class="td-inner">Faza 0 ✅</span></td></tr>
+        </tbody></table></div><p>MVP, infrastructura server, sistem identitate xID, Android Beta v1.5.7, update-uri OTA — LIVE</p><div class="rm-track" role="list"><article class="rm-card rm-now" style="--c:#14F195;--cs:rgba(20,241,149,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>1</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 1 🔄</h4>
+            <span class="rm-badge rm-badge-now">In curs</span>
+          </div>
+          
+          <ul class="rm-list"><li>Beta public</li><li>peste 1000 xID-uri</li><li>versiune iOS</li><li>mecanisme anti-spam extinse</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#9945FF;--cs:rgba(153,69,255,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>2</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 2</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          
+          <ul class="rm-list"><li>Integrare portofel Mainnet</li><li>xID multi-aplicatie</li><li>lansare publica DACx</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#38BDF8;--cs:rgba(56,189,248,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>3</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 3</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          
+          <ul class="rm-list"><li>Criptare end-to-end</li><li>plati $DAC in DACx</li><li>comunicare de grup</li></ul>
+        </div>
+      </article><article class="rm-card rm-next" style="--c:#FBBF24;--cs:rgba(251,191,36,0.14)">
+        <div class="rm-node" aria-hidden="true"><span>4</span></div>
+        <div class="rm-body">
+          <div class="rm-top">
+            <h4 class="rm-title">Faza 4</h4>
+            <span class="rm-badge rm-badge-next">Planificat</span>
+          </div>
+          
+          <ul class="rm-list"><li>Integrare guvernanta DAO</li><li>interoperabilitate completa cu ecosistemul DACnetwork</li></ul>
+        </div>
+      </article></div><p>16.8 Cum sa Obtii DACx</p><p>APK-ul DACx Android Beta este disponibil pe <a class="inline-link" href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a> si pe GitHub Releases (<a class="inline-link" href="https://github.com/DAC-web3/dacx/releases/latest" target="_blank" rel="noopener noreferrer">https://github.com/DAC-web3/dacx/releases/latest</a>). Baza nativa este v1.5.7. Cine e pe v1.5.6 trebuie sa instaleze APK-ul nou o data; doar inchiderea si redeschiderea nu ajunge. Docs si colaborare: <a class="inline-link" href="https://github.com/DAC-web3/dac-network" target="_blank" rel="noopener noreferrer">https://github.com/DAC-web3/dac-network</a></p><p>Pasi de Instalare</p><h3 class="h3">Descarca fisierul APK de la www.dacnetwork.io</h3><p>Mergi la Setari Android → Securitate → Activeaza 'Instalare aplicatii necunoscute'</p><p>Deschide fisierul APK si finalizeaza instalarea</p><p>Lanseaza DACx si creeaza-ti xID-ul</p><p>Seteaza PIN-ul personal si incepe sa comunici</p><p>DACx Beta este disponibil acum pentru Android.</p><p>Versiunea 1.5.7 — Parte a ecosistemului DACnetwork.io.</p><p>Versiunea iOS planificata pentru Faza 1.</p><p>Descarcare: <a class="inline-link" href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a></p><p>16.9 Angajamentul pentru Confidentialitate</p><p>DACx nu colecteaza numere de telefon. DACx nu colecteaza adrese de email. DACx nu vinde date ale utilizatorilor. DACx nu monetizeaza comportamentul utilizatorilor. Fraza de recuperare nu este trimisa pe server. Mesajele nu sunt inca criptate end-to-end. Mesajele necitite stau pe serverele DACx pana sunt citite, apoi sunt sterse dupa 3 minute. Dupa aceea, continutul conversatiei nu este pastrat ca arhiva permanenta.</p><p>Fiecare decizie arhitecturala in DACx reflecta principiul central al DACnetwork: tehnologia trebuie sa serveasca utilizatorul, nu sa il exploateze. Comunicarea este un drept uman. Confidentialitatea este o cerinta de proiectare, nu o functionalitate optionala.</p></div>
+    </section><section class="chapter" id="ch-17-ro">
+      <header class="ch-head">
+        <span class="ch-no">17</span>
+        <h2 class="ch-title">Intrebari Frecvente</h2>
+      </header>
+      <div class="ch-body"><div class="qa-list"><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este DACnetwork?</div></div><div class="a"><span>R</span><div class="qa-text">DACnetwork este un ecosistem Web3 descentralizat construit in jurul participarii reale, creatiei digitale, infrastructurii fizice si comunicarii private. Ecosistemul combina rutaX (Dovada Activitatii), DACmeta (Societate Digitala), DAC Smart Systems (DePIN) si DACx (Stratul de Comunicare Privata), toate impartasind tokenul utilitar $DAC.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este $DAC?</div></div><div class="a"><span>R</span><div class="qa-text">$DAC este tokenul utilitar nativ al ecosistemului DACnetwork, emis pe Solana folosind standardul Token-2022. Este conceput pentru a facilita participarea, a recompensa contributia si a permite interactiunile in toate componentele ecosistemului.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Care este supply-ul total al $DAC?</div></div><div class="a"><span>R</span><div class="qa-text">3.000.000.000 $DAC — permanent fix. Autoritatea de Emitere a fost revocata. Nu pot fi creati niciodata tokeni suplimentari.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Care este Adresa Contract (Mint Address) a $DAC?</div></div><div class="a"><span>R</span><div class="qa-text"><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code> — Verificati intotdeauna aceasta adresa inainte de a interactiona cu $DAC.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">$DAC are o taxa de transfer?</div></div><div class="a"><span>R</span><div class="qa-text">Da. O taxa de transfer de 0,5% este retinuta automat la transferurile eligibile prin protocolul Token-2022. Acesti tokeni se acumuleaza in Portofelul de Ardere si sunt incinerati permanent pe blockchain-ul Solana.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este rutaX?</div></div><div class="a"><span>R</span><div class="qa-text">rutaX este aplicatia mobila Proof of Activity (in dezvoltare). Formula tinta: 1 $DAC la 10 km de activitate validata GPS, max 5 $DAC per utilizator pe zi si 50.000 $DAC pe retea pe zi. Recompensele ruleaza acum pe Devnet, nu $DAC pe mainnet. Identitatea se leaga din DACx (Link rutaX).</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este DACx?</div></div><div class="a"><span>R</span><div class="qa-text">DACx este stratul de comunicare privata al DACnetwork. Ofera mesagerie efemera (3 minute dupa citire), xID de 9 cifre si un portofel Solana Devnet integrat — fara telefon sau email. Live pe Android Beta v1.5.7 cu OTA. Apelurile vocale exista in UI-ul actual. Nu sunt E2EE. E2EE este planificat, nu live.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este un xID?</div></div><div class="a"><span>R</span><div class="qa-text">Un xID este o identitate de retea unica de 9 cifre in DACx care inlocuieste identificarea personala traditionala. Nu este necesar numar de telefon sau adresa de email. xID-ul este legat de un portofel Solana self-custody.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este DACmeta?</div></div><div class="a"><span>R</span><div class="qa-text">DACmeta este componenta de societate digitala a DACnetwork — medii virtuale structurate pentru interactiune, creatie si schimb de active digitale intr-o economie alimentata de $DAC.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Ce este DAC Smart Systems?</div></div><div class="a"><span>R</span><div class="qa-text">DAC Smart Systems este componenta de infrastructura fizica (DePIN) a DACnetwork. Nodurile edge fizice contribuie cu activitate de infrastructura masurabila la retea, verificata on-chain.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">$DAC garanteaza randamente financiare?</div></div><div class="a"><span>R</span><div class="qa-text">Nu. DACnetwork nu garanteaza aprecierea pretului, randamente financiare, lichiditate sau listari pe burse de schimb. $DAC este un token utilitar. Participarea implica riscuri.</div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Unde pot verifica $DAC on-chain?</div></div><div class="a"><span>R</span><div class="qa-text">Toate tranzactiile sunt verificabile pe Solana. Folositi Solscan cu Adresa Contract oficiala: <code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></div></div></div><div class="qa"><div class="q"><span>I</span><div class="qa-text">Unde pot descarca DACx?</div></div><div class="a"><span>R</span><div class="qa-text">DACx Android Beta APK este disponibil la <a class="inline-link" href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a></div></div></div></div><aside class="wp-close" aria-label="DACnetwork">
+    <div class="wp-close-brand">DAC<span>network</span></div>
+    <p class="wp-close-tag">$DAC — Tokenul Societatii</p>
+    <div class="wp-close-slogans"><span>Misca. Creeaza. Construieste.</span><span>Detine-ti Contributia.</span><span>Alimenteaza Viitorul.</span></div>
+    <p class="wp-close-assoc">Asociatia DACnetwork Web3  |  Bucuresti, Romania</p>
+    <div class="wp-close-links"><a href="https://dacnetwork.io/" target="_blank" rel="noopener noreferrer">www.dacnetwork.io</a><a href="https://x.com/DACLabs" target="_blank" rel="noopener noreferrer">X: @DACLabs</a><a href="https://t.me/DACNetwork" target="_blank" rel="noopener noreferrer">Telegram: t.me/DACNetwork</a></div>
+    <div class="wp-close-mint"><span>Mint</span><code class="addr">4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</code></div>
+    <p class="wp-close-legal">$DAC este un token utilitar. Nu o investitie. Publicat conform Regulamentului (UE) 2023/1114 — MiCA.</p>
+  </aside></div>
+    </section></div>
+      <p class="foot" id="foot">Asociația DACnetwork Web3 · Sector 5, București · dacnetwork.io · $DAC utility token</p>
+    </div>
+  </div>
+</div>
+<script>
+const copy={
+  en:{toc:'Contents',pill:'Official · v2.0 · 2026 · Solana',sub:'Whitepaper — Token of Society',lede:'A decentralized ecosystem on Solana where human activity, digital creation and private communication become verifiable value.',mica:'Important — MiCA (EU) 2023/1114',foot:'Asociația DACnetwork Web3 · Sector 5, Bucharest · dacnetwork.io · $DAC utility token',back:'← Back to site',read:'Read whitepaper ↓',title:'DACnetwork Whitepaper v2.0 — $DAC Token of Society | Solana',desc:'Official DACnetwork Whitepaper v2.0. $DAC utility token on Solana: tokenomics, roadmap, governance, rutaX, DACmeta, DACx and MiCA-aware utility framework.'},
+  ro:{toc:'Cuprins',pill:'Oficial · v2.0 · 2026 · Solana',sub:'Whitepaper — Tokenul Societății',lede:'Ecosistem descentralizat pe Solana unde activitatea umană, creația digitală și comunicarea privată devin valoare verificabilă.',mica:'Important — MiCA (UE) 2023/1114',foot:'Asociația DACnetwork Web3 · Sector 5, București · dacnetwork.io · $DAC token utilitar',back:'← Înapoi pe site',read:'Citește whitepaper ↓',title:'DACnetwork Whitepaper v2.0 — $DAC Tokenul Societății | Solana',desc:'Whitepaper oficial DACnetwork v2.0. Token utilitar $DAC pe Solana: tokenomics, foaie de parcurs, guvernanță, rutaX, DACmeta, DACx și cadru utilitar aliniat MiCA.'}
+};
+function setMetaTag(attr,key,content){
+  var el=document.querySelector('meta['+attr+'="'+key+'"]');
+  if(!el){ el=document.createElement('meta'); el.setAttribute(attr,key); document.head.appendChild(el); }
+  el.setAttribute('content',content);
+}
+function setLang(lang){
+  document.documentElement.lang=lang;document.documentElement.dataset.lang=lang;
+  document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+  document.getElementById('panel-en').classList.toggle('on',lang==='en');
+  document.getElementById('panel-ro').classList.toggle('on',lang==='ro');
+  document.getElementById('toc-en').hidden=lang!=='en';
+  document.getElementById('toc-ro').hidden=lang!=='ro';
+  document.querySelectorAll('[data-en]').forEach(el=>el.hidden=lang!=='en');
+  document.querySelectorAll('[data-ro]').forEach(el=>el.hidden=lang!=='ro');
+  const c=copy[lang];
+  tocLabel.textContent=c.toc;pillText.textContent=c.pill;heroSub.textContent=c.sub;
+  heroLede.textContent=c.lede;micaTitle.textContent=c.mica;foot.textContent=c.foot;
+  if(backSite) backSite.textContent=c.back;
+  if(ctaRead){ ctaRead.textContent=c.read; ctaRead.href=lang==='ro'?'#ch-00-ro':'#ch-00-en'; }
+  // SEO meta per language
+  document.title=c.title;
+  setMetaTag('name','description',c.desc);
+  setMetaTag('property','og:title',c.title);
+  setMetaTag('property','og:description',c.desc);
+  setMetaTag('property','og:locale',lang==='ro'?'ro_RO':'en_US');
+  setMetaTag('property','og:url','https://dacnetwork.io/whitepaper.html?lang='+lang);
+  setMetaTag('name','twitter:title',c.title);
+  setMetaTag('name','twitter:description',c.desc);
+  var can=document.querySelector('link[rel="canonical"]');
+  if(can) can.setAttribute('href','https://dacnetwork.io/whitepaper.html');
+  try{
+    localStorage.setItem('dac_wp_lang',lang);
+    const u=new URL(location.href); u.searchParams.set('lang',lang); history.replaceState(null,'',u);
+  }catch(e){}
+  highlightNav();
+}
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+const params=new URLSearchParams(location.search);
+const fromUrl=params.get('lang');
+const saved=(()=>{try{return localStorage.getItem('dac_wp_lang')}catch(e){return null}})();
+const initial=(fromUrl==='ro'||fromUrl==='en')?fromUrl:(saved==='ro'||saved==='en'?saved:'en');
+setLang(initial);
+const side=document.getElementById('side'),bd=document.getElementById('bd'),menuBtn=document.getElementById('menu');
+let menuScrollY=0;
+function setMenu(open){
+  if(!side||!bd||!menuBtn) return;
+  const wasOpen=side.classList.contains('open');
+  side.classList.toggle('open',open);
+  bd.classList.toggle('show',open);
+  if(open && !wasOpen){
+    menuScrollY=window.scrollY||window.pageYOffset||0;
+    document.body.classList.add('menu-open');
+    document.body.style.top='-'+menuScrollY+'px';
+    requestAnimationFrame(function(){ try{ side.scrollTop=0; }catch(e){} });
+  }else if(!open && wasOpen){
+    document.body.classList.remove('menu-open');
+    document.body.style.top='';
+    window.scrollTo(0, menuScrollY||0);
+  }else{
+    document.body.classList.toggle('menu-open',open);
+  }
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+  menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  menuBtn.textContent=open?'✕ Close':'☰ Menu';
+}
+function toggleMenu(){setMenu(!side.classList.contains('open'))}
+function closeMenu(){setMenu(false)}
+menuBtn.addEventListener('click',(e)=>{e.preventDefault();e.stopPropagation();toggleMenu()});
+bd.addEventListener('click',closeMenu);
+document.querySelectorAll('.nav-a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',(e)=>{if(e.key==='Escape') closeMenu()});
+// swipe-friendly: close if viewport grows past mobile breakpoint
+window.addEventListener('resize',()=>{if(window.innerWidth>960) closeMenu()},{passive:true});
+
+// Reading progress
+const prog=document.getElementById('prog');
+function onScroll(){
+  const h=document.documentElement;
+  const max=h.scrollHeight-h.clientHeight;
+  const p=max>0?(h.scrollTop/max)*100:0;
+  if(prog) prog.style.width=p+'%';
+  highlightNav();
+}
+function highlightNav(){
+  const lang=document.documentElement.dataset.lang||'en';
+  const nav=document.getElementById(lang==='ro'?'toc-ro':'toc-en');
+  if(!nav) return;
+  const links=[...nav.querySelectorAll('.nav-a')];
+  let current='';
+  for(const a of links){
+    const id=a.getAttribute('href')?.slice(1);
+    const el=id&&document.getElementById(id);
+    if(el && el.getBoundingClientRect().top<=140) current=id;
+  }
+  links.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+current));
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>

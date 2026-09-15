@@ -1,0 +1,28 @@
+{
+  "name": "DACnetwork",
+  "symbol": "DAC",
+  "description": "DACnetwork is a Web3 ecosystem on Solana. $DAC is a Token-2022 utility token, not an investment. DACx messenger is Android beta with a Devnet wallet. rutaX rewards run on Devnet, not mainnet.",
+  "image": "https://dacnetwork.io/DAC_logo.png",
+  "external_url": "https://www.dacnetwork.io",
+  "attributes": [
+    { "trait_type": "Network", "value": "Solana" },
+    { "trait_type": "Token Standard", "value": "Token-2022" },
+    { "trait_type": "Ecosystem", "value": "DACnetwork" }
+  ],
+  "properties": {
+    "category": "fungible",
+    "files": [
+      {
+        "uri": "https://dacnetwork.io/DAC_logo.png",
+        "type": "image/png"
+      }
+    ],
+    "links": {
+      "website": "https://www.dacnetwork.io",
+      "x": "https://x.com/DACLabs",
+      "telegram": "https://t.me/DACNetwork",
+      "github": "https://github.com/DAC-web3",
+      "whitepaper": "https://www.dacnetwork.io/whitepaper.html?lang=en"
+    }
+  }
+}

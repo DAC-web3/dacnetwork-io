@@ -1,0 +1,78 @@
+/* Mobile fit + Chrome: do not let CORS/compositor kill the page */
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;min-width:0}
+#root{max-width:100%;min-width:0}
+#root img,.scene-section img{max-width:100%;height:auto}
+button,a{touch-action:manipulation}
+
+.dacx-product-breakout{
+  width:100%!important;
+  max-width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+
+/* Chrome PC: huge blur + backdrop-filter paint the page black */
+.site-poster-orb,
+.site-poster-orb-main,
+.site-poster-orb-green,
+.site-poster-orb-white,
+.site-poster-ring,
+.dacx-orb{
+  filter:none!important;
+  -webkit-filter:none!important;
+}
+.site-header,
+.cookie-banner-inner,
+.glass-card,
+.premium-panel{
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+.site-header{background:rgba(5,8,22,.96)!important}
+.hologram-icon,.cursor-dot,.cursor-ring{mix-blend-mode:normal!important}
+
+@media (max-width:768px){
+  .site-header{
+    max-width:100%;
+    overflow-x:hidden;
+    padding-left:max(12px,env(safe-area-inset-left));
+    padding-right:max(12px,env(safe-area-inset-right));
+  }
+  .mobile-menu{
+    max-height:min(70vh,520px);
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .mobile-menu-link{min-height:44px}
+  .token-address,
+  .token-contract-card code,
+  code.addr{
+    word-break:break-all;
+    overflow-wrap:anywhere;
+    max-width:100%;
+  }
+  .token-table,
+  .token-table-wrap,
+  .table-wrap{
+    max-width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  .token-table{min-width:0!important}
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost,
+  .prem-btn-fill,
+  .prem-btn-ghost,
+  .prem-btn-solscan,
+  .token-copy-btn{
+    min-height:44px;
+    max-width:100%;
+    box-sizing:border-box;
+  }
+  .token-contract-actions{
+    flex-wrap:wrap;
+    width:100%;
+  }
+}
