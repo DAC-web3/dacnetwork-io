@@ -1,13 +1,9 @@
 # DACnetwork — https://dacnetwork.io
 User-agent: *
 Allow: /
-
-# Prefer public pages
 Allow: /whitepaper.html
 Allow: /og-image.jpg
 Allow: /DAC_logo.png
-
-# Block noisy query-only noise if any crawler loops
 Disallow: /*?*utm_
 Disallow: /*?*fbclid=
 
