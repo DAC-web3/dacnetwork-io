@@ -1260,3 +1260,32 @@ html {
 .is-scrolled .nav { background: rgba(11,22,18,.94) !important; }
 @media (max-width: 760px) { .nav-links { background: rgb(13,25,20) !important; } }
 ::-webkit-scrollbar-track { background: #0f1c17; }
+
+/* ===== Containers v2: frosted smoke glass, hairline border, color only on hover ===== */
+.glass, .feed-card, .step {
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(255,255,255,.07), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015)) !important;
+  background-color: rgba(10,18,15,.55) !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+  backdrop-filter: blur(14px) saturate(1.25); -webkit-backdrop-filter: blur(14px) saturate(1.25);
+  box-shadow: 0 1px 0 rgba(255,255,255,.09) inset, 0 -1px 0 rgba(0,0,0,.35) inset, 0 20px 50px -30px rgba(0,0,0,.8) !important;
+  border-radius: 22px;
+}
+.glass:hover, .feed-card:hover {
+  border-color: rgba(20,241,149,.38) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,.12) inset, 0 28px 60px -28px rgba(0,0,0,.85), 0 0 0 1px rgba(20,241,149,.12), 0 0 46px -18px rgba(20,241,149,.5) !important;
+}
+.glass h3 { color: #f4faf6; }
+.glass p, .glass li { color: #b9cbc1; }
+.hero { background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.01)) rgba(10,18,15,.55) !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 50px 110px -45px rgba(0,0,0,.85) !important; }
+.hero .token {
+  background: linear-gradient(180deg, rgba(20,34,29,.92), rgba(10,18,15,.95)) padding-box,
+    conic-gradient(from var(--ang,0deg), rgba(20,241,149,.9), rgba(255,255,255,.08) 25%, rgba(153,69,255,.8) 50%, rgba(255,255,255,.08) 75%, rgba(20,241,149,.9)) border-box !important;
+}
+.clean li { background: rgba(255,255,255,.035) !important; border: 1px solid rgba(255,255,255,.08) !important; }
+.note { background: rgba(20,241,149,.05) !important; border-radius: 12px; }
+#status .block { background-color: rgba(10,18,15,.6) !important; }
+.site-footer { background: linear-gradient(rgba(9,16,13,.9), rgba(9,16,13,.9)) padding-box, linear-gradient(90deg, rgba(255,255,255,.14), rgba(20,241,149,.35), rgba(255,255,255,.14)) border-box !important; }
