@@ -1168,3 +1168,25 @@ img { image-rendering: auto; }
   .nav .menu { order: 3; }
   .nav-actions { order: 2; margin-left: auto !important; }
 }
+
+/* ===== Full-width header ===== */
+header.nav, .nav.wrap {
+  width: 100% !important; max-width: none !important; margin: 0 !important;
+  padding-inline: max(18px, calc((100% - var(--measure, 1180px)) / 2)) !important;
+  border-radius: 0 !important; box-sizing: border-box;
+  border-bottom: 1px solid rgba(20,241,149,.22) !important;
+}
+@media (max-width: 760px) {
+  header.nav, .nav.wrap { padding-inline: 14px !important; }
+  .nav .menu { display: inline-flex !important; flex: 0 0 46px; visibility: visible !important; opacity: 1 !important; }
+  .nav-links { left: 10px !important; right: 10px !important; }
+}
+
+/* header breaks out of .wrap to span the full viewport */
+header.nav {
+  width: 100vw !important; max-width: 100vw !important;
+  margin-inline: calc(50% - 50vw) !important;
+  padding-inline: max(14px, calc((100vw - var(--measure, 1180px)) / 2)) !important;
+}
+
+html, body { overflow-x: clip !important; }
