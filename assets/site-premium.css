@@ -1343,3 +1343,40 @@ html {
 .clean li { background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.02) 45%), rgba(20,241,149,.06) !important; border: 1px solid rgba(255,255,255,.14) !important; box-shadow: 0 1px 0 rgba(255,255,255,.18) inset; }
 .note { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.01) 50%), rgba(20,241,149,.1) !important; box-shadow: 0 1px 0 rgba(255,255,255,.2) inset; }
 .site-footer { background: linear-gradient(112deg, transparent 20%, rgba(255,255,255,.07) 30%, transparent 40%) padding-box, linear-gradient(180deg, rgba(255,255,255,.07), transparent 40%) padding-box, linear-gradient(rgba(10,20,16,.96), rgba(10,20,16,.96)) padding-box, linear-gradient(90deg, rgba(255,255,255,.3), rgba(20,241,149,.6), rgba(153,69,255,.55), rgba(255,255,255,.3)) border-box !important; }
+
+/* ===== Final finish ===== */
+/* soft gloss (no hard edge), softer scan line that does not cross text */
+.glass, .feed-card, .step {
+  background:
+    linear-gradient(112deg, transparent 20%, rgba(255,255,255,.13) 30%, rgba(255,255,255,.03) 38%, transparent 46%),
+    linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 30%, rgba(255,255,255,0) 52%),
+    radial-gradient(90% 120% at 0% 0%, rgba(var(--c1),.32), transparent 62%),
+    radial-gradient(90% 120% at 100% 100%, rgba(var(--c2),.28), transparent 62%),
+    linear-gradient(160deg, rgba(22,40,34,.82), rgba(10,20,17,.9)) !important;
+}
+.hero::after { height: 1px; opacity: .35; animation-duration: 11s; }
+@keyframes scan { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: .35; } 88% { opacity: .35; } 100% { transform: translateY(700px); opacity: 0; } }
+/* list rows inside cards: rounded, soft glass */
+.glass .clean li, .block .clean li { border-radius: 12px !important; background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.015)), rgba(8,16,13,.35) !important; border: 1px solid rgba(255,255,255,.1) !important; box-shadow: 0 1px 0 rgba(255,255,255,.14) inset !important; }
+.glass .clean { gap: 8px; }
+/* badges */
+.tag, .pill, .badge { backdrop-filter: blur(6px); }
+/* headings: finer rhythm */
+h2 { letter-spacing: -.02em; text-wrap: balance; }
+p { text-wrap: pretty; }
+/* buttons: crisper edge */
+.btn { box-shadow: 0 1px 0 rgba(255,255,255,.28) inset, 0 10px 26px -12px rgba(0,0,0,.7); }
+.btn-mint { box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 14px 34px -12px rgba(20,241,149,.7); }
+/* section spacing and divider glow on timeline nodes */
+.sec::before { box-shadow: 0 0 0 4px rgba(20,241,149,.12), 0 0 16px rgba(20,241,149,.8); }
+/* subtle image polish */
+.shot { border-radius: 20px; border: 1px solid rgba(255,255,255,.16); box-shadow: 0 30px 70px -30px rgba(0,0,0,.9), 0 0 60px -26px rgba(20,241,149,.5); }
+/* links: animated underline in body copy */
+.legal a, .sec p a { text-decoration-color: rgba(20,241,149,.5); text-underline-offset: 3px; transition: text-decoration-color .2s, color .2s; }
+.legal a:hover, .sec p a:hover { text-decoration-color: #14f195; color: #14f195; }
+/* mobile: keep gloss light and cards comfortable */
+@media (max-width: 760px) {
+  .glass, .feed-card { border-radius: 18px; }
+  .hero::after { display: none; }
+  h2 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+}
