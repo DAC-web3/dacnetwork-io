@@ -430,3 +430,7 @@ html, body {
 }
 .side { background: rgba(20,36,29,.94) !important; }
 .top, .top:hover { background: rgba(20,36,29,.88) !important; }
+
+/* whitepaper: keep holographic logo visible above the html gradient */
+body { background: transparent !important; }
+html::after { opacity: .16 !important; }
