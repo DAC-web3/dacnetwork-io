@@ -1,3 +1,10 @@
+<!--
+THESIS: DACnetwork is a connected field atlas, not a stack of generic product cards.
+OWN-WORLD: Cool mineral stock, deep forest ink, bright route green, cobalt wayfinding, and precise map rules.
+STORY: Visitors trace product status and network, distinguish what is live from what is planned, then explore DACx or the complete whitepaper.
+FIRST VIEWPORT: Compact masthead above a two-column atlas cover; connected product-status route, Mainnet/Devnet key, and equal DACx/whitepaper actions on the left, token identity and mint labels on the right.
+FORM: Atlas of Signal, fourth of seven grounded directions; one continuous, addressable route connects the chapters. Seed a14a094f.
+-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,16 +13,15 @@
     <link rel="icon" type="image/png" href="DAC_logo-sm.png" />
     <link rel="apple-touch-icon" href="DAC_logo-sm.png" />
     <link rel="canonical" href="https://dacnetwork.io/" />
-    <link rel="alternate" hreflang="en" href="https://dacnetwork.io/?lang=en" />
-    <link rel="alternate" hreflang="ro" href="https://dacnetwork.io/?lang=ro" />
-    <link rel="alternate" hreflang="x-default" href="https://dacnetwork.io/" />
     <title>DACnetwork (DAC) | Solana Token-2022 | $DAC</title>
     <meta name="description" content="DACnetwork is a Web3 ecosystem on Solana. $DAC is a Token-2022 utility token, not an investment. DACx Android 1.5.10 is live. rutaX is in development on Devnet." />
     <meta name="keywords" content="DACnetwork, DAC, $DAC, Solana, Token-2022, DACx, rutaX, DACmeta, utility token, Proof of Activity" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#050505" />
-    <meta name="author" content="Asociația DACnetwork Web3" />
+    <meta name="theme-color" content="#050a08" />
+    <meta name="application-name" content="DACnetwork" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Asociația DACnetwork Web3" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DACnetwork" />
     <meta property="og:title" content="DACnetwork — Value is proven" />
@@ -30,18 +36,20 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@DACLabs" />
     <meta name="twitter:title" content="DACnetwork — Value is proven" />
-    <meta name="twitter:description" content="Utility token on Solana. DACx 1.5.10 live." />
+    <meta name="twitter:description" content="Utility token on Solana. DACx 1.5.10 live. rutaX in development on Devnet." />
     <meta name="twitter:image" content="https://dacnetwork.io/og-image.jpg" />
+<meta name="twitter:image:alt" content="DACnetwork - $DAC utility token on Solana" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/site-premium.css?v=17" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "Organization",
+            "@id": "https://dacnetwork.io/#organization",
             "name": "DACnetwork",
             "legalName": "Asociația DACnetwork Web3",
             "url": "https://dacnetwork.io/",
@@ -51,6 +59,8 @@
           },
           {
             "@type": "WebSite",
+            "@id": "https://dacnetwork.io/#website",
+            "publisher": { "@id": "https://dacnetwork.io/#organization" },
             "url": "https://dacnetwork.io/",
             "name": "DACnetwork",
             "inLanguage": ["en","ro"]
@@ -79,7 +89,7 @@
     </script>
   </head>
   <body>
-    <div class="wrap">
+    <div class="wrap" id="top">
       <header class="nav">
         <a class="brand" href="index.html"><img src="DAC_logo.png" width="42" height="42" alt="DACnetwork" /><span class="brand-name">DACnetwork</span><span class="sys">SYS.01</span></a>
         <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -95,7 +105,7 @@
             <button type="button" data-lang="en" onclick="dacSetLang('en')">EN</button>
             <button type="button" data-lang="ro" onclick="dacSetLang('ro')">RO</button>
           </div>
-          <a class="btn btn-mint" href="DACx_Beta_V.1.5.10.apk" download="DACx_Beta_V.1.5.10.apk" data-t="apk">Download DACx</a>
+          <a class="btn btn-mint" href="https://dacnetwork.io/DACx_Beta_V.1.5.10.apk" download="DACx_Beta_V.1.5.10.apk" data-t="apk">Download DACx</a>
         </div>
       </header>
 
@@ -104,12 +114,18 @@
           <div class="stage">
             <div class="kicker"><i></i><span data-t="kicker">Solana · Token-2022 · Utility</span></div>
             <p class="signal"><span class="dot"></span><span data-en="Signal live · network quiet · utility only" data-ro="Semnal live · rețea liniștită · doar utilitate">Signal live · network quiet · utility only</span></p>
-            <h1><span data-t="h1a">Value is</span><br /><em data-t="h1b">proven.</em></h1>
+            <h1><span data-t="h1a">Human</span><br /><em data-t="h1b">activity.</em></h1>
             <p class="lead" data-t="lead">DACnetwork is a Web3 ecosystem on Solana. Real activity, private communication and infrastructure, coordinated by the $DAC utility token. Not an investment.</p>
+            <nav class="signal-route" aria-label="DACnetwork product status">
+              <a class="signal-stop" href="#dacx"><strong>DACx</strong><small data-en="Android beta · Live" data-ro="Beta Android · Live">Android beta · Live</small></a>
+              <a class="signal-stop" href="#roadmap"><strong>rutaX</strong><small data-en="Devnet · In development" data-ro="Devnet · În dezvoltare">Devnet · In development</small></a>
+              <a class="signal-stop" href="#meta"><strong>DACmeta</strong><small data-en="Planned" data-ro="Planificat">Planned</small></a>
+              <a class="signal-stop" href="#smart"><strong>Smart Systems</strong><small data-en="Research &amp; development" data-ro="Cercetare și dezvoltare">Research &amp; development</small></a>
+            </nav>
+            <div class="network-note"><span data-en="TOKEN · MAINNET" data-ro="TOKEN · MAINNET">TOKEN · MAINNET</span><span data-en="DACx WALLET · DEVNET" data-ro="WALLET DACx · DEVNET">DACx WALLET · DEVNET</span></div>
             <div class="cta">
-              <a class="btn btn-mint" href="DACx_Beta_V.1.5.10.apk" download="DACx_Beta_V.1.5.10.apk" data-t="apk">Download DACx</a>
-              <a class="btn btn-glass" href="whitepaper.html" data-t="wp">Whitepaper</a>
-              <a class="btn btn-glass" href="https://solscan.io/token/4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb" target="_blank" rel="noopener" data-t="sol">Solscan</a>
+              <a class="btn btn-mint" href="https://dacnetwork.io/DACx_Beta_V.1.5.10.apk" download="DACx_Beta_V.1.5.10.apk" data-t="apk">Download DACx</a>
+              <a class="btn btn-mint" href="whitepaper.html" data-t="wp">Whitepaper</a>
             </div>
           </div>
           <aside class="glass token instrument" id="token">
@@ -126,10 +142,11 @@
               <div class="stat"><b data-t="net">Network</b><span>Solana</span></div>
               <div class="stat"><b data-t="std">Standard</b><span>Token-2022</span></div>
             </div>
-            <div class="addr" style="margin-bottom:8px"><b data-t="mainnet" style="display:block;color:#7dffc6;font-family:Outfit,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Mainnet mint</b>4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</div>
-            <div class="addr"><b data-t="devnet" style="display:block;color:#7dffc6;font-family:Outfit,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Devnet mint</b>8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR</div>
+            <div class="addr" style="margin-bottom:8px"><b data-t="mainnet">Mainnet mint</b>4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb</div>
+            <div class="addr"><b data-t="devnet">Devnet mint</b>8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR</div>
             <div class="cta">
               <button class="btn btn-glass" type="button" id="copyMint" data-t="copy">Copy mint</button>
+              <a class="btn btn-glass" href="https://solscan.io/token/4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb" target="_blank" rel="noopener" data-t="sol">Solscan</a>
             </div>
             <div class="flags">
               <i data-t="mint">Mint revoked</i>
@@ -201,7 +218,7 @@
 
         <section class="grid" id="stack">
           <article class="glass card" id="dacx">
-            <img class="shot" src="dacx-promo.jpg" width="960" height="540" alt="DACx Android 1.5.10" />
+            <img class="shot" src="dacx-promo.jpg" width="960" height="540" alt="DACx Android 1.5.10 app screens: private messenger with xID and Solana wallet" loading="lazy" decoding="async" />
             <small data-t="live">Live · Android 1.5.10</small>
             <h3>DACx</h3>
             <p data-en="The ecosystem private messenger. xID, ephemeral messages (3 min), Solana Devnet wallet — no phone, no email." data-ro="Messengerul privat al ecosistemului. xID, mesaje efemere (3 min), wallet Solana Devnet — fără telefon, fără email.">The ecosystem private messenger. xID, ephemeral messages (3 min), Solana Devnet wallet — no phone, no email.</p>
@@ -213,7 +230,7 @@
             </ul>
             <p class="note" data-en="Wallet = Solana Devnet (not $DAC mainnet). Messages are not E2EE yet — held on servers until read, then deleted after 3 minutes. Voice calls are not offered in the current UI. OTA on v1.5.10 — close and reopen the app." data-ro="Wallet = Solana Devnet (nu $DAC mainnet). Mesajele nu sunt încă E2EE — stau pe server până sunt citite, apoi dispar în 3 minute. Apelurile vocale nu sunt oferite acum. Actualizări OTA pe v1.5.10 — închide și redeschide app-ul.">Wallet = Solana Devnet (not $DAC mainnet). Messages are not E2EE yet — held on servers until read, then deleted after 3 minutes. Voice calls are not offered in the current UI. OTA on v1.5.10 — close and reopen the app.</p>
             <div class="cta">
-              <a class="btn btn-mint" href="DACx_Beta_V.1.5.10.apk" download="DACx_Beta_V.1.5.10.apk" data-t="apk">Download DACx</a>
+              <a class="btn btn-mint" href="https://dacnetwork.io/DACx_Beta_V.1.5.10.apk" download="DACx_Beta_V.1.5.10.apk" data-t="apk">Download DACx</a>
             </div>
           </article>
           <div class="stack">
@@ -383,17 +400,28 @@
         <p class="note" data-t="note">Asociația DACnetwork Web3 — registration in progress (OG 26/2000). Not yet in the register. $DAC is a utility token, not an investment.</p>
       </main>
 
-      <footer>
-        <span>© 2026 DACnetwork</span>
-        <nav>
-          <a href="whitepaper.html">Whitepaper</a>
-          <a href="https://github.com/DAC-web3" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://x.com/DACLabs" target="_blank" rel="noopener">X</a>
-          <a href="https://t.me/DACNetwork" target="_blank" rel="noopener">Telegram</a>
-          <a href="https://www.linkedin.com/company/dacnetwork-web3/" target="_blank" rel="noopener">LinkedIn</a>
-        </nav>
+      <footer class="site-footer">
+        <div class="footer-main">
+          <a class="footer-brand" href="#top" aria-label="DACnetwork — back to top">
+            <img src="DAC_logo-sm.png" alt="" width="34" height="34" />
+            <span>DACnetwork</span>
+          </a>
+          <nav aria-label="Footer">
+            <a href="whitepaper.html">Whitepaper</a>
+            <a href="privacy.html" data-en="Privacy Policy" data-ro="Politica de Confidențialitate">Privacy Policy</a>
+            <a href="terms.html" data-en="Terms of Use" data-ro="Termeni de utilizare">Terms of Use</a>
+            <a href="https://github.com/DAC-web3" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://x.com/DACLabs" target="_blank" rel="noopener">X</a>
+            <a href="https://t.me/DACNetwork" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://www.linkedin.com/company/dacnetwork-web3/" target="_blank" rel="noopener">LinkedIn</a>
+          </nav>
+        </div>
+        <div class="footer-meta">
+          <span>© 2026 DACnetwork</span>
+          <span>Solana · Token-2022 · Utility</span>
+        </div>
       </footer>
     </div>
-    <script src="assets/site.js"></script>
+    <script src="assets/site.js"></script><script src="assets/premium-fx.js"></script><script src="assets/privacy-notice.js"></script>
   </body>
 </html>

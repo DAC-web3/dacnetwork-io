@@ -6,8 +6,8 @@
     wp: { en: "Whitepaper", ro: "Whitepaper" },
     apk: { en: "Download DACx", ro: "Descarcă DACx" },
     kicker: { en: "Solana · Token-2022 · Utility", ro: "Solana · Token-2022 · Utilitar" },
-    h1a: { en: "Value is", ro: "Valoarea se" },
-    h1b: { en: "proven.", ro: "dovedește." },
+    h1a: { en: "Human", ro: "Activitate" },
+    h1b: { en: "activity.", ro: "umană." },
     lead: {
       en: "DACnetwork is a Web3 ecosystem on Solana. Real activity, private communication and infrastructure, coordinated by the $DAC utility token. Not an investment.",
       ro: "DACnetwork este un ecosistem Web3 pe Solana. Activitate reală, comunicare privată și infrastructură, coordonate de tokenul utilitar $DAC. Nu este o investiție."

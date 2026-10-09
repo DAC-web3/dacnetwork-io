@@ -1,9 +1,6 @@
-# DACnetwork — https://dacnetwork.io
+# DACnetwork - https://dacnetwork.io
 User-agent: *
 Allow: /
-Allow: /whitepaper.html
-Allow: /og-image.jpg
-Allow: /DAC_logo.png
 Disallow: /*?*utm_
 Disallow: /*?*fbclid=
 
