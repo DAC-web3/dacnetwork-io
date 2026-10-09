@@ -434,3 +434,16 @@ html, body {
 /* whitepaper: keep holographic logo visible above the html gradient */
 body { background: transparent !important; }
 html::after { opacity: .16 !important; }
+
+/* mid-tone + light black influence */
+html, body {
+  background:
+    radial-gradient(130% 100% at 50% 40%, transparent 45%, rgba(0,0,0,.38) 100%),
+    radial-gradient(1000px 650px at 0% -8%, rgba(20,241,149,.2), transparent 60%),
+    radial-gradient(900px 600px at 104% 2%, rgba(153,69,255,.18), transparent 62%),
+    linear-gradient(180deg, #15261e 0%, #0f1c17 60%, #0b1612 100%) !important;
+  background-attachment: fixed !important;
+}
+body { background: transparent !important; }
+.side { background: rgba(13,25,20,.95) !important; }
+.top { background: rgba(13,25,20,.9) !important; }
