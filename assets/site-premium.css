@@ -1190,3 +1190,30 @@ header.nav {
 }
 
 html, body { overflow-x: clip !important; }
+
+/* ===== Lighter mid-tone background (not too dark, not too light) ===== */
+:root { --paper: #12211b; --paper-bright: #1a2d25; --line: rgba(255,255,255,.13); --muted: #b0c5b9; }
+html { background: #12211b !important; }
+body {
+  background:
+    radial-gradient(1100px 700px at 4% -8%, rgba(20,241,149,.26), transparent 60%),
+    radial-gradient(950px 650px at 104% 4%, rgba(153,69,255,.24), transparent 62%),
+    radial-gradient(900px 600px at 50% 112%, rgba(20,241,149,.18), transparent 62%),
+    linear-gradient(180deg, #16271f 0%, #11201a 100%) !important;
+  background-attachment: fixed;
+}
+.nav, .is-scrolled .nav { background: rgba(20,36,29,.78) !important; }
+.is-scrolled .nav { background: rgba(20,36,29,.92) !important; }
+.site-footer { background: linear-gradient(rgba(17,31,25,.94), rgba(17,31,25,.94)) padding-box, linear-gradient(90deg, rgba(20,241,149,.5), rgba(153,69,255,.5)) border-box !important; }
+.glass, .block, .card, .token { background-color: rgba(255,255,255,.055); }
+html::before { opacity: .9; }
+::-webkit-scrollbar-track { background: #12211b; }
+* { scrollbar-color: rgba(20,241,149,.4) #12211b; }
+@media (max-width: 760px) { .nav-links { background: rgb(21,38,31) !important; } }
+
+.hero { background: #19302a !important; border-color: rgba(255,255,255,.16); }
+.hero::before { background:
+    linear-gradient(90deg, rgba(18,33,27,.82) 5%, rgba(18,33,27,.5) 50%, rgba(18,33,27,.15) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='520' viewBox='0 0 720 520'%3E%3Cg fill='none' stroke='%2314f195' stroke-opacity='.3' stroke-width='1'%3E%3Cpath d='M-20 110 130 45 270 105 410 25 560 82 740 12M-30 185 120 125 265 185 410 105 565 162 740 90M-10 280 150 210 290 270 430 190 580 250 745 175M-20 375 135 305 285 365 445 285 590 345 745 265'/%3E%3C/g%3E%3C/svg%3E") center/cover !important; }
+.glass, .hero .token { background: linear-gradient(rgba(27,48,40,.88), rgba(27,48,40,.88)) padding-box, conic-gradient(from var(--ang,0deg), #14f195, #9945ff, #5ee7ff, #c7f36c, #14f195) border-box !important; }
+.site-footer { background-color: #162a23; }

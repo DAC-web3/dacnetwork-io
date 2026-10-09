@@ -418,3 +418,15 @@ html::after { content:""; position:fixed; z-index:-1; pointer-events:none; left:
 :focus-visible { outline: 2px solid #14f195; outline-offset: 3px; }
 ::selection { background: #14f195; color: #04120c; }
 * { scrollbar-width: thin; scrollbar-color: rgba(20,241,149,.35) #050a08; }
+
+/* ===== Lighter mid-tone background ===== */
+:root { --bg: #12211b; --bg2: #1a2d25; --panel: #1a2d25; --line: rgba(255,255,255,.13); }
+html, body {
+  background:
+    radial-gradient(1000px 650px at 0% -8%, rgba(20,241,149,.24), transparent 60%),
+    radial-gradient(900px 600px at 104% 2%, rgba(153,69,255,.22), transparent 62%),
+    linear-gradient(180deg, #16271f 0%, #11201a 100%) !important;
+  background-attachment: fixed !important;
+}
+.side { background: rgba(20,36,29,.94) !important; }
+.top, .top:hover { background: rgba(20,36,29,.88) !important; }
