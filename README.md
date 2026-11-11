@@ -18,12 +18,12 @@ This repo is the site source/build. Hosting remains on dacnetwork.io (Hostinger)
 | Site | https://dacnetwork.io |
 | Whitepaper | https://dacnetwork.io/whitepaper.html |
 | On-chain metadata | https://dacnetwork.io/dac-metadata.json |
-| **Latest APK** | https://dacnetwork.io/DACx_Beta_V.1.5.11.apk |
+| **Latest APK** | https://github.com/DAC-web3/dacx/releases/download/v1.5.11/dacx-1.5.11.apk |
 | Mint **Mainnet** | `4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb` |
 | Mint **Devnet** | `8NeGLu1s8jQjvrtgpTKPMkGg71NKKpwaMthhUSkfLatR` |
 | Solscan | https://solscan.io/token/4m9XHiFaZcoUiMxaJH9DbxSXJXuQuXASw3q35hZPjghb |
 
-The Android APK is large (~191 MiB), gitignored, and must never be committed; deploy it to hosting separately.
+The Android APK is large (~191 MiB), gitignored, and must never be committed; download it from the tagged GitHub release.
 
 ## Related repos (do not mix)
 
