@@ -4,7 +4,7 @@
     nav2: { en: "DACx", ro: "DACx" },
     nav3: { en: "Ecosystem", ro: "Ecosistem" },
     wp: { en: "Whitepaper", ro: "Whitepaper" },
-    apk: { en: "Download DACx", ro: "Descarcă DACx" },
+    apk: { en: "Download DACx 1.5.11", ro: "Descarcă DACx 1.5.11" },
     kicker: { en: "Solana · Token-2022 · Utility", ro: "Solana · Token-2022 · Utilitar" },
     h1a: { en: "Human", ro: "Activitate" },
     h1b: { en: "activity.", ro: "umană." },
@@ -12,7 +12,7 @@
       en: "DACnetwork is a Web3 ecosystem on Solana. Real activity, private communication and infrastructure, coordinated by the $DAC utility token. Not an investment.",
       ro: "DACnetwork este un ecosistem Web3 pe Solana. Activitate reală, comunicare privată și infrastructură, coordonate de tokenul utilitar $DAC. Nu este o investiție."
     },
-    live: { en: "Live · Android 1.5.10", ro: "Live · Android 1.5.10" },
+    live: { en: "Live · Android 1.5.11", ro: "Live · Android 1.5.11" },
     dacxTitle: { en: "Private messenger.", ro: "Messenger privat." },
     dacxBody: {
       en: "xID. Messages disappear 3 minutes after they are read. Solana Devnet wallet. Not end-to-end encrypted. Not mainnet $DAC.",
